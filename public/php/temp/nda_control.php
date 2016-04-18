@@ -439,23 +439,24 @@ $pdf->Ln();
 
 
 
-$txt='<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular del área de CONTABILIDAD tenga acceso o constituyan actividades inherentes a la descripción de su puesto.';
+$txt='<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular del área de GESTIÓN Y CONTROL tenga acceso o constituyan actividades inherentes a la descripción de su puesto.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular del área de CONTABILIDAD, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ';
+$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular del área de GESTIÓN Y CONTROL, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
 
-$txt='<b>8.1</b> La correspondiente a la elaboración de pólizas de diario, de ingreso y de egreso y en general de los registros contables;<br />
-<b>8.2</b> La inherente a conciliaciones bancarias;<br />
-<b>8.3</b> La requerida para efectuar la conciliación de los estados de cuenta de proveedores;<br />
-<b>8.4</b> La contenida en títulos de crédito o aquella necesaria para su elaboración;<br />
-<b>8.5</b> La referente a transferencias desde o en favor de cualquier tipo de cuenta a nombre de “CONSORCIO HERMES” así como los mecanismos para su ejecución y administración;<br />
-<b>8.6</b> Aquella que se agrupa para entrega al despacho externo que proporcione a “CONSORCIO HERMES” servicios en materia fiscal, tributaria o contable, particularmente para la determinación de impuestos;<br />
-<b>8.7</b> La que identifique incidencias de personal para el cálculo de pago de nómina;<br />
+$txt='<b>8.1</b> La que conste en y se integre para la elaboración y actualización de contratos de personal;<br />
+<b>8.2</b> La referente a documentación legal de “CONSORCIO HERMES” tales como permisos, licencias o autorizaciones;<br />
+<b>8.3</b> La contenida en instrumentos otorgados ante fedatario público tales como actas, pólizas o testimonios;<br />
+<b>8.4</b> La relativa a la elaboración de contratos con proveedores y prestadores de bienes y servicios;<br />
+<b>8.5</b>  La referente a la elaboración de contratos con clientes;<br />
+<b>8.6</b> Aquella relacionada con los términos de operación comercial establecidos con cada cliente;<br />
+<b>8.7</b> La correspondiente a las garantías emitidas por “CONSORCIO HERMES”;<br />
+
 ';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
@@ -476,10 +477,11 @@ $pdf->SetFont('helvetica', '', 12);
 
 
 $txt='
-<b>8.8</b> La relativa a movimientos de altas y bajas ante el Instituto Mexicano del Seguro Social;<br />
-<b>8.9</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
-<b>8.10</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados al área de CONTABILIDAD.';
-$pdf->writeHTMLCell(170, 36, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+<b>8.8</b> La derivada de sus funciones de representación de “LA EMPRESA”;<br />
+<b>8.9</b> La correspondiente a los servicios profesionales que contrate “CONSORCIO HERMES”;<br />
+<b>8.10</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
+<b>8.11</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados al área de GESTIÓN Y CONTROL.';
+$pdf->writeHTMLCell(170, 44, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
 
@@ -566,7 +568,7 @@ $letra = $paginas[$num-1];
 $fecha = strtolower($dias[DIA-1])." de ".strtolower(MES)." de dos mil ".strtolower($anio[ANIO-2001]);
 
 
-$txt='Leído que fue por las Partes y debidamente enteradas de todas y cada una de las cláusulas y del contenido y alcance legal del presente Convenio, lo suscriben por duplicado y de conformidad, reconociendo las firmas que plasman al margen y al calce en sus '.$num.' '.$letra.' fojas útiles como las que utilizan para todos los actos jurídicos en que intervienen, en Santiago de Querétaro, Querétaro a los '.$fecha  ;
+$txt='Leído que fue por las Partes y debidamente enteradas de todas y cada una de las cláusulas y del contenido y alcance legal del presente Convenio, lo suscriben por duplicado y de conformidad, reconociendo las firmas que plasman al margen y al calce en sus '.$num.' '.$letra.' fojas útiles como las que utilizan para todos los actos jurídicos en que intervienen, en Santiago de Querétaro, Querétaro a '.$fecha  ;
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 $pdf->Ln();
