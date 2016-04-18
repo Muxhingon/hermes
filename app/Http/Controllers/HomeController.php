@@ -38,4 +38,8 @@ class HomeController extends Controller
     public function NDAcadmva(){
       return view('NDA.cadmva');
     }
+
+    public function NDAcontabilidad(){
+      return view('NDA.contabilidad');
+    }
 }

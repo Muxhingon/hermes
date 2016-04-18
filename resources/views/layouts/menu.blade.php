@@ -79,6 +79,18 @@
                             @endif
 
 
+                            @if($path == "nda/contabilidad")
+                              <li>
+                                <a class="active" href="{{ url('/nda/contabilidad') }}"><i class="fa fa-file fa-fw"></i> Contabilidad </a>
+                              </li>
+
+                            @else
+                              <li>
+                                <a href="{{ url('/nda/contabilidad') }}"><i class="fa fa-file fa-fw"></i> Contabilidad </a>
+                              </li>
+                            @endif
+
+
 
 
 

@@ -18,3 +18,4 @@ Route::get('/', 'HomeController@index');
 Route::get('/register', 'HomeController@register');
 Route::get('/nda/general', 'HomeController@NDAgeneral');
 Route::get('/nda/coordinacionAdministrativa', 'HomeController@NDAcadmva');
+Route::get('/nda/contabilidad', 'HomeController@NDAcontabilidad');
