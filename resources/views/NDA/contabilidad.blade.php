@@ -21,7 +21,7 @@
 
 
 <br />
-  <form action="{{asset('php/temp/nda_general.php')}}" target="_blank" method="post">
+  <form action="{{asset('php/temp/nda_contabilidad.php')}}" target="_blank" method="post">
 
         <div class="col-md-12">
           <h2>Datos sobre Consorcio HERMES y su Representante Legal</h2>
