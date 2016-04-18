@@ -33,9 +33,9 @@ $dia_contlab = $separada_cont[0];
 $mes_contlab = $separada_cont[1];
 $anio_contlab = $separada_cont[2];
 
-define('DIA_CONT',strtolower($dias[$dia_contlab-1]));
-define('MES_CONT',strtolower($meses[$mes_contlab-1]));
-define('ANIO_CONT',strtolower($anio[$anio_contlab-2001]));
+define('DIA_CONT',$dias[$dia_contlab-1]);
+define('MES_CONT',$meses[$mes_contlab-1]);
+define('ANIO_CONT',$anio[$anio_contlab-2001]);
 
 
 //FECHA DEL NDA
@@ -56,9 +56,9 @@ $separada_poliza = explode('/', $fecha_poliza);
 $dia_poliza = $separada_poliza[0];
 $mes_poliza = $separada_poliza[1];
 $anio_nda = $separada_poliza[2];
-define('opbm', strtolower($meses[$dia_poliza-1]));
-define('opbd', strtolower($dias[$mes_poliza-1]));
-define('opbn', strtolower($anio[$anio_nda-2001]));
+define('opbm', $meses[$dia_poliza-1]);
+define('opbd', $dias[$mes_poliza-1]);
+define('opbn', $anio[$anio_nda-2001]);
 
 
 
@@ -266,7 +266,7 @@ $pdf->SetFont('helvetica', '', 12);
 
 $pdf->Ln();
 $txt="
-  <b>A) </b> Que es una Sociedad Anónima de Capital Variable debidamente constituida conforme a las leyes de los Estados Unidos Mexicanos, según consta en la Escritura Pública No. 10,071 (diez mil setenta y uno), de fecha ocho de julio del año dos mil cinco, otorgada ante la fe de la licenciada Sonia Alcántara Magos  Titular de la Notaría No. 18 (dieciocho) de la Ciudad de Santiago de Querétaro, Estado de Querétaro, cuyo primer testimonio quedó inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31322/1 (treinta y un mil trescientos veintidós diagonal uno).
+  <b>A) </b> Que es una Sociedad Anónima de Capital Variable debidamente constituida conforme a las leyes de los Estados Unidos Mexicanos, según consta en la Escritura Pública No. 10,071 (diez mil setenta y uno), de fecha ocho de julio del año dos mil cinco, otorgada ante la fe de la licenciada Sonia Alcántara Magos  Titular de la Notaría No. 18 (dieciocho) de la Ciudad de Santiago de Querétaro, Estado de Querétaro, cuyo primer testimonio quedó inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31222/1 (treinta y un mil trescientos veintidós diagonal uno).
  ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
@@ -436,22 +436,20 @@ $txt='<b>SÉPTIMA.-</b> “EL TRABAJADOR” guardará escrupulosamente los secre
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular del área de FACTURACIÓN tenga acceso o constituyan actividades inherentes a la descripción de su puesto.";
+$txt="<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular de la DIRECCIÓN DE PLANEACIÓN tenga acceso o constituyan actividades inherentes a la descripción de su puesto.";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular del área de FACTURACIÓN, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ";
+$txt="Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular de la DIRECCIÓN DE PLANEACIÓN, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
-$txt="<b>8.1</b>El listado de clientes de “LA EMPRESA”;<br />
-<b>8.2</b>La referente a identificación de clientes proporcionadas por “LA EMPRESA” para realizar funciones de ventas por teléfono, telemarketing y de mostrador;<br />
-<b>8.3</b> La que obtenga como consecuencia de su contacto y comunicación con clientes;<br />
-<b>8.4</b>La referente a ventas de LA EMPRESA” realizadas por teléfono, telemarketing y de mostrador;<br />
-<b>8.5</b> La contenida en los contratos o documentación que se generen o se integre como consecuencia de acciones vinculadas a la realización de operaciones de “LA EMPRESA” tendentes a posibles ventas por teléfono, telemarketing o de mostrador  aun cuando las mismas no se hayan concretado;<br />
-<b>8.6</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
-<b>8.7</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados al área de FACTURACIÓN.
+$txt="<b>8.1</b> La correspondiente a los proveedores de “LA EMPRESA”;<br />
+<b>8.2</b> La referente a las condiciones acordadas con los diversos proveedores de “CONSORCIO HERMES” en materia de precios, plazos de entrega, condiciones de pago, garantías y especificaciones propias de la relación de negocio;<br />
+<b>8.3</b> La contenida en los medios de registro y control de “LA EMPRESA” sobre las condiciones acordadas con los diversos proveedores;<br />
+<b>8.4</b> La integrada y vinculada a los mecanismos o sistemas de costeo de las distintas divisiones de “LA EMPRESA”;<br />
+<b>8.5</b> La que se encuentre a cargo del área de tecnología de la información y comunicaciones de “LA EMPRESA;<br />
  ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
@@ -472,10 +470,17 @@ $pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
 $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
+$txt="<b>8.6</b> La derivada de quejas y fallas reportadas por los clientes de “LA EMPRESA”;<br />
+<b>8.7</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
+<b>8.8</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados a la DIRECCIÓN DE PLANEACIÓN.";
+$pdf->writeHTMLCell(170, 32, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$pdf->Ln();
+
+
 
 
 $txt='<b>NOVENA.-</b> “EL TRABAJADOR” considerará como secretos técnicos y comerciales cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información que conste en medios escritos o electrónicos, imágenes, video, voz o texto referente al nombre o nombres de clientes actuales o potenciales, negociaciones, metodologías, fórmulas de negocios, planes de trabajo, compilaciones o registros, información relativa a investigaciones o estudios sobre “LA EMPRESA”, registros de desarrollo de proyectos o investigaciones que realice o contrate “CONSORCIO HERMES” sea total o relativa a cualquiera de sus etapas, inventos, información proporcionada por sus clientes, capacidad tecnológica y programas de cómputo, así como cualquier información en que se exprese o se ostente la leyenda “Información Confidencial” incluso cuando “EL TRABAJADOR” haya intervenido en su conformación. ';
-$pdf->writeHTMLCell(170, 62, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 

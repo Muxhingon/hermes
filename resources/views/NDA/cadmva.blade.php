@@ -43,7 +43,7 @@
           <div class="form-group col-md-6">
             <label  for="domicilio_empre">Domicilio determinado por la dirección general  </label>
             <input required type="text" class="form-control" name="domicilio_empre" id="domicilio_empre"
-            value="Prolongación Corregidora No. 15, Colonia San Pablo, Santiago de Querétaro, Querétaro , C.P. 76130"
+            value="Prolongación Corregidora No. 15, Colonia San Pablo, Santiago de Querétaro, Querétarox, C.P. 76130"
             placeholder=" Calle , Colonia, Municipio, Estado , C.P.">
           </div>
         </div>
