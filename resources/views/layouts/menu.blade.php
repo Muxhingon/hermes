@@ -93,12 +93,12 @@
 
                             @if($path == "nda/planeacion")
                               <li>
-                                <a class="active" href="{{ url('/nda/planeacion') }}"><i class="fa fa-file fa-fw"></i> Dirección  </a>
+                                <a class="active" href="{{ url('/nda/planeacion') }}"><i class="fa fa-file fa-fw"></i> Dirección de Planeación </a>
                               </li>
 
                             @else
                               <li>
-                                <a href="{{ url('/nda/planeacion') }}"><i class="fa fa-file fa-fw"></i> Contabilidad </a>
+                                <a href="{{ url('/nda/planeacion') }}"><i class="fa fa-file fa-fw"></i> Dirección de Planeación </a>
                               </li>
                             @endif
 
