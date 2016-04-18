@@ -102,6 +102,17 @@
                               </li>
                             @endif
 
+                            @if($path == "nda/control")
+                              <li>
+                                <a class="active" href="{{ url('/nda/control') }}"><i class="fa fa-file fa-fw"></i> Gestión y Control </a>
+                              </li>
+
+                            @else
+                              <li>
+                                <a href="{{ url('/nda/control') }}"><i class="fa fa-file fa-fw"></i> Gestión y Control </a>
+                              </li>
+                            @endif
+
 
 
                           </ul>
