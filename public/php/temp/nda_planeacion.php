@@ -64,8 +64,8 @@ define('opbn', $anio[$anio_nda-2001]);
 
 
 
-define('REPRESENTANTE', strtoupper($_POST['representante']));
-define('EMPLEADO', strtoupper($_POST['empleado']));
+define('REPRESENTANTE', mb_strtoupper($_POST['representante'],'UTF-8'));
+define('EMPLEADO', mb_strtoupper($_POST['empleado'],'UTF-8'));
 
 
 
@@ -77,7 +77,7 @@ define('ClauB', $_POST['Cb']);
 define('numeroinst',$_POST['numeroinstrumento']);
 define('ClaussB', $_POST['opcionb']);
 
-define('NOMBRE_PUBLICO', strtoupper($_POST['nombre_publico']));
+define('NOMBRE_PUBLICO', mb_strtoupper($_POST['nombre_publico'],'UTF-8'));
 define('NOTARIO_O_CORREDOR', $_POST['publico']);
 
 define('NUMERO_NOTARIA', $_POST['notaria_numero']);

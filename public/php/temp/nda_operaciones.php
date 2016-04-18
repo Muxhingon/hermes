@@ -64,8 +64,8 @@ define('opbn', $anio[$anio_nda-2001]);
 
 
 
-define('REPRESENTANTE', strtoupper($_POST['representante']));
-define('EMPLEADO', strtoupper($_POST['empleado']));
+define('REPRESENTANTE', mb_strtoupper($_POST['representante'],'UTF-8'));
+define('EMPLEADO', mb_strtoupper($_POST['empleado'],'UTF-8'));
 
 
 
@@ -77,7 +77,7 @@ define('ClauB', $_POST['Cb']);
 define('numeroinst',$_POST['numeroinstrumento']);
 define('ClaussB', $_POST['opcionb']);
 
-define('NOMBRE_PUBLICO', strtoupper($_POST['nombre_publico']));
+define('NOMBRE_PUBLICO', mb_strtoupper($_POST['nombre_publico'],'UTF-8'));
 define('NOTARIO_O_CORREDOR', $_POST['publico']);
 
 define('NUMERO_NOTARIA', $_POST['notaria_numero']);
@@ -437,20 +437,21 @@ $txt='<b>SÉPTIMA.-</b> “EL TRABAJADOR” guardará escrupulosamente los secre
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular de la DIRECCIÓN DE PLANEACIÓN tenga acceso o constituyan actividades inherentes a la descripción de su puesto.";
+$txt="<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular del área de OPERACIONES tenga acceso o constituyan actividades inherentes a la descripción de su puesto.";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular de la DIRECCIÓN DE PLANEACIÓN, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ";
+$txt="Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular del área de OPERACIONES, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente:  ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
-$txt="<b>8.1</b> La correspondiente a los proveedores de “LA EMPRESA”;<br />
-<b>8.2</b> La referente a las condiciones acordadas con los diversos proveedores de “CONSORCIO HERMES” en materia de precios, plazos de entrega, condiciones de pago, garantías y especificaciones propias de la relación de negocio;<br />
-<b>8.3</b> La contenida en los medios de registro y control de “LA EMPRESA” sobre las condiciones acordadas con los diversos proveedores;<br />
-<b>8.4</b> La integrada y vinculada a los mecanismos o sistemas de costeo de las distintas divisiones de “LA EMPRESA”;<br />
-<b>8.5</b> La que se encuentre a cargo del área de tecnología de la información y comunicaciones de “LA EMPRESA;<br />
+$txt="<b>8.1</b> La referente a las diversas líneas de negocio con proveedores y prestadores de bienes y servicios;<br />
+<b>8.2</b>  La que obtenga como consecuencia de su contacto y comunicación con proveedores y prestadores de bienes y servicios;<br />
+<b>8.3</b>  La contenida en los contratos con clientes que suscriba como representante de “LA EMPRESA”;<br />
+<b>8.4</b>  La referente a las propuestas que elabore “LA EMPRESA” para participar en procesos de concurso, licitaciones, invitaciones restringidas o de adjudicación directa;<br />
+<b>8.5</b>  La relativa a los proyectos que en materia de ventas le encomiende la Dirección General de “LA EMPRESA”;<br />
+
  ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
@@ -471,9 +472,9 @@ $pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
 $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
-$txt="<b>8.6</b> La derivada de quejas y fallas reportadas por los clientes de “LA EMPRESA”;<br />
-<b>8.7</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
-<b>8.8</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados a la DIRECCIÓN DE PLANEACIÓN.";
+$txt="<b>8.6</b>  La vinculada a los egresos que autorice en ausencia del Director General;<br />
+<b>8.7</b>  La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
+<b>8.8</b>  La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados al área de OPERACIONES.";
 $pdf->writeHTMLCell(170, 32, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
