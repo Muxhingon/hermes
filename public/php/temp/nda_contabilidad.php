@@ -386,7 +386,7 @@ $pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
 $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
-$txt="<b>TERCERA.-</b>   “EL TRABAJADOR” reconoce y acepta que cualquier información a que acceda o sea de su conocimiento derivada o  con motivo de la relación laboral que sostiene con “CONSORCIO HERMES” tiene una aplicación comercial que le permite a “LA EMPRESA” obtener o mantener una ventaja competitiva o económica frente a terceros en la realización de su actividad empresarial, en consecuencia  “CONSORCIO HERMES” ha implantado diversos controles jurídicos y tecnológicos para preservar dicha información por lo que “EL TRABAJADOR” la considerará y tratará como “CONFIDENCIAL” y “RESTRINGIDA”.";
+$txt="<b>TERCERA.-</b> “EL TRABAJADOR” reconoce y acepta que cualquier información a que acceda o sea de su conocimiento derivada o  con motivo de la relación laboral que sostiene con “CONSORCIO HERMES” tiene una aplicación comercial que le permite a “LA EMPRESA” obtener o mantener una ventaja competitiva o económica frente a terceros en la realización de su actividad empresarial, en consecuencia  “CONSORCIO HERMES” ha implantado diversos controles jurídicos y tecnológicos para preservar dicha información por lo que “EL TRABAJADOR” la considerará y tratará como “CONFIDENCIAL” y “RESTRINGIDA”.";
 $pdf->writeHTMLCell(170, 45, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
@@ -395,7 +395,7 @@ $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
-$txt='<b>QUINTA.- </b> La administración de “CONSORCIO HERMES” determina respecto de su información aquella que excepcionalmente debe tener carácter público acorde a sus estrategias de negocio y en estricto apego a los acuerdos de confidencialidad que suscribe con otras empresas.  Cuando cierta información propiedad o en posesión de “LA EMPRESA” es considerada pública, se publicita a través de medios de divulgación autorizados y contratados por “LA EMPRESA” y  mediante INTERNET por conducto de dominios que son adquiridos y registrados por “CONSORCIO HERMES” de manera directa o a través de sus subsidiarias siendo el principal el ubicado en la dirección electrónica www.consorciohermes.mx.  En ningún otro caso “EL TRABAJADOR” podrá asumir o inferir que la información  de “LA EMPRESA” es pública y de detectar algún supuesto que lo implique deberá reportarlo inmediatamente por escrito a la Dirección General de “CONSORCIO HERMES”.';
+$txt='<b>QUINTA.- </b> La Administración de “CONSORCIO HERMES” determina respecto de su información aquella que excepcionalmente debe tener carácter público acorde a sus estrategias de negocio y en estricto apego a los acuerdos de confidencialidad que suscribe con otras empresas.  Cuando cierta información propiedad o en posesión de “LA EMPRESA” es considerada pública, se publicita a través de medios de divulgación autorizados y contratados por “LA EMPRESA” y  mediante INTERNET por conducto de dominios que son adquiridos y registrados por “CONSORCIO HERMES” de manera directa o a través de sus subsidiarias siendo el principal el ubicado en la dirección electrónica www.consorciohermes.mx.  En ningún otro caso “EL TRABAJADOR” podrá asumir o inferir que la información  de “LA EMPRESA” es pública y de detectar algún supuesto que lo implique deberá reportarlo inmediatamente por escrito a la Dirección General de “CONSORCIO HERMES”.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
@@ -428,7 +428,7 @@ $pdf->writeHTMLCell(170, 37, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
 
-$txt='A través del presente instrumento “CONSORCIO HERMES” autoriza a “EL TRABAJADOR” para utilizar la información a que se refiere la presente cláusula exclusivamente en el contexto del proyecto específico del cual emanó y hasta en tanto “EL TRABAJADOR” se encuentre asignado al mismo por parte de “LA EMPRESA”.  Una vez concluida la participación de “EL TRABAJADOR” en el proyecto éste quedará impedido de utilizar dicha información a menos que medie autorización por escrito de “CONSORCIO HERMES” que en forma expresa así lo acredite.';
+$txt=' A través del presente instrumento “CONSORCIO HERMES” autoriza a “EL TRABAJADOR” para utilizar la información a que se refiere la presente cláusula exclusivamente en el contexto del proyecto específico del cual emanó y hasta en tanto “EL TRABAJADOR” se encuentre asignado al mismo por parte de “LA EMPRESA”.  Una vez concluida la participación de “EL TRABAJADOR” en el proyecto éste quedará impedido de utilizar dicha información a menos que medie autorización por escrito de “CONSORCIO HERMES” que en forma expresa así lo acredite.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
