@@ -187,9 +187,9 @@ $empleado = EMPLEADO;
 
 define('COSTADO'," POR “CONSORCIO HERMES” ".REPRESENTANTE."         “EL TRABAJADOR” ".EMPLEADO);
 
-if(ClauB==1){
+if(ClauB=='1'){
   $textoCB='contenido de los Estatutos de la Escritura Pública descrita en el apartado anterior manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.';
-}else if(ClauB==2){
+}else if(ClauB=='2'){
   $textoCB="Instrumento Público No.".numeroinst." de fecha ".opbd." de ".opbm." de Dos Mil ".opbn;
   $textoCB.=" otorgado ante la fe del Fedatario Público ".NOMBRE_PUBLICO  ;
 
@@ -203,6 +203,7 @@ if(ClauB==1){
     $textoCB.=NUMERO_CORREDOR;
     $textoCB.=" en ".CORREDOR_ESTADO;
   }
+  $textoCB.=" inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31222 (treinta y un mil trescientos veintidós) correspondiente a “CONSORCIO HERMES”, manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.";
 }
 
 
@@ -225,7 +226,7 @@ $correo_emp = EMAIL_EMPLEADO;
 
 $fechaCont=" ".DIA_CONT." de ".MES_CONT." de "." dos mil ".ANIO_CONT;
 
-$textoCB.=" inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31222 (treinta y un mil trescientos veintidós) correspondiente a “CONSORCIO HERMES”, manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.";
+
 
 
 
@@ -247,8 +248,8 @@ $pdf->SetFont('helvetica', '', 9);
 $pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
 $pdf->StopTransform();
 
-
-$txt="CONVENIO DE CONFIDENCIALIDAD QUE CELEBRAN POR UNA PARTE CONSORCIO HERMES, S.A DE C.V., POR CONDUCTO DE SU REPRESENTANTE LEGAL $representante A QUIEN EN ADELANTE SE LE DENOMINARÁ INDISTINTAMENTE “CONSORCIO HERMES” O “LA EMPRESA” Y POR OTRA PARTE $empleado QUIEN INTERVIENE PERSONALMENTE Y POR DERECHO PROPIO A QUIEN EN ADELANTE SE LE DENOMINARÁ “EL TRABAJADOR”, DE ACUERDO CON LAS SIGUIENTES:";
+$cb=ClauB;
+$txt=$cb."CONVENIO DE CONFIDENCIALIDAD QUE CELEBRAN POR UNA PARTE CONSORCIO HERMES, S.A DE C.V., POR CONDUCTO DE SU REPRESENTANTE LEGAL $representante A QUIEN EN ADELANTE SE LE DENOMINARÁ INDISTINTAMENTE “CONSORCIO HERMES” O “LA EMPRESA” Y POR OTRA PARTE $empleado QUIEN INTERVIENE PERSONALMENTE Y POR DERECHO PROPIO A QUIEN EN ADELANTE SE LE DENOMINARÁ “EL TRABAJADOR”, DE ACUERDO CON LAS SIGUIENTES:";
 
 $pdf->SetFont('helvetica', 'B', 12);
 $pdf->MultiCell(170, 5,$txt, 0, 'J', 0, 2, 15 ,25, true);

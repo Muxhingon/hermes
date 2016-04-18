@@ -187,9 +187,9 @@ $empleado = EMPLEADO;
 
 define('COSTADO'," POR “CONSORCIO HERMES” ".REPRESENTANTE."         “EL TRABAJADOR” ".EMPLEADO);
 
-if(ClauB==1){
+if(ClauB=='1'){
   $textoCB='contenido de los Estatutos de la Escritura Pública descrita en el apartado anterior manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.';
-}else if(ClauB==2){
+}else if(ClauB=='2'){
   $textoCB="Instrumento Público No.".numeroinst." de fecha ".opbd." de ".opbm." de Dos Mil ".opbn;
   $textoCB.=" otorgado ante la fe del Fedatario Público ".NOMBRE_PUBLICO  ;
 
@@ -203,6 +203,7 @@ if(ClauB==1){
     $textoCB.=NUMERO_CORREDOR;
     $textoCB.=" en ".CORREDOR_ESTADO;
   }
+  $textoCB.=" inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31222 (treinta y un mil trescientos veintidós) correspondiente a “CONSORCIO HERMES”, manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.";
 }
 
 
@@ -224,10 +225,6 @@ $dom_emp = DOMICILIO_EMPLEADO;
 $correo_emp = EMAIL_EMPLEADO;
 
 $fechaCont=" ".DIA_CONT." de ".MES_CONT." de "." dos mil ".ANIO_CONT;
-
-$textoCB.=" inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31222 (treinta y un mil trescientos veintidós) correspondiente a “CONSORCIO HERMES”, manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.";
-
-
 
 
 
