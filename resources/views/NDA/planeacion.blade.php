@@ -10,7 +10,7 @@
 
 <br />
 <div class="col-md-12">
-  <h1>Formulario para generar NDA Contabilidad</h1>
+  <h1>Formulario para generar NDA Dirección de Planeación</h1>
   <p class="text-info">
     Por favor proporcione la información que requieren los campos, es muy importante seguir las secuencias, orden y características en que se plantea la presentación de los datos
   </p>
@@ -21,7 +21,7 @@
 
 
 <br />
-  <form action="{{asset('php/temp/nda_contabilidad.php')}}" target="_blank" method="post">
+  <form action="{{asset('php/temp/nda_planeacion.php')}}" target="_blank" method="post">
 
         <div class="col-md-12">
           <h2>Datos sobre Consorcio HERMES y su Representante Legal</h2>

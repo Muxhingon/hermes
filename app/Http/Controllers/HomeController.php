@@ -42,4 +42,8 @@ class HomeController extends Controller
     public function NDAcontabilidad(){
       return view('NDA.contabilidad');
     }
+
+    public function NDAplaneacion(){
+      return view('NDA.planeacion');
+    }
 }
