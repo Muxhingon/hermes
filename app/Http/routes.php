@@ -21,3 +21,4 @@ Route::get('/nda/coordinacionAdministrativa', 'HomeController@NDAcadmva');
 Route::get('/nda/contabilidad', 'HomeController@NDAcontabilidad');
 Route::get('/nda/planeacion', 'HomeController@NDAplaneacion');
 Route::get('/nda/control', 'HomeController@NDAcontrol');
+Route::get('/nda/operaciones', 'HomeController@NDAoperaciones');
