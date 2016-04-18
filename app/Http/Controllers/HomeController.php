@@ -50,4 +50,8 @@ class HomeController extends Controller
     public function NDAcontrol(){
       return view('NDA.control');
     }
+
+    public function NDAoperaciones(){
+      return view('NDA.operaciones');
+    }
 }
