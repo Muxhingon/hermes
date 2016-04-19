@@ -436,20 +436,20 @@ $txt='<b>SÉPTIMA.-</b> “EL TRABAJADOR” guardará escrupulosamente los secre
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que como MENSAJERO tenga acceso o constituyan actividades inherentes a la descripción de su puesto.";
+$txt="<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que como responsable de INTENDENCIA tenga acceso o constituyan actividades inherentes a la descripción de su puesto.";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como MENSAJERO, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente:";
+$txt="Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto de INTENDENCIA, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
-$txt="<b>8.1</b> La relativa a los domicilios de proveedores y prestadores de bienes y servicios de “LA EMPRESA”;<br />
-<b>8.2</b> La referente a los domicilios de clientes de “LA EMPRESA”;<br />
-<b>8.3</b> La correspondiente a las rutas de entrega y cobranza de “LA EMPRESA”;<br />
-<b>8.4</b> La contenida en la documentación que le sea encomendada para su entrega y recepción dentro y fuera de la empresa;<br />
-<b>8.5</b>  La derivada de fechas, contactos y circunstancias que se presenten en torno  de la documentación que le sea encomendada para su entrega y recepción dentro y fuera de la empresa;<br />
+$txt="<b>8.1</b> Cualquiera que obre en documentos aun y cuando se encuentren colocados a simple vista en los escritorios o áreas de trabajo del personal de “LA EMPRESA”;<br />
+<b>8.2</b> La contenida en medios de almacenamiento electrónico ubicados en instalaciones de “LA EMPRESA”;<br />
+<b>8.3</b> La derivada de conversaciones realizadas a través de equipos de comunicación de “LA EMPRESA”;<br />
+<b>8.4</b> La que se desprenda de reuniones de trabajo celebradas en las instalaciones de “LA EMPRESA” entre personal de “CONSORCIO HERMES”;<br />
+<b>8.5</b> La proporcionada por proveedores o prestadores de bienes y servicios que acudan a las instalaciones de “LA EMPRESA”<br />
 
  ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
@@ -471,9 +471,10 @@ $pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
 $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
-$txt="<b>8.6</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
-<b>8.7</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados como MENSAJERO.";
-$pdf->writeHTMLCell(170, 32, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$txt="<b>8.6</b> La contenida en documentos que no hayan sido triturados o destruidos mediante procesos que impidan su conocimiento;<br />
+<b>8.7</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
+<b>8.8</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados como responsable de INTENDENCIA.";
+$pdf->writeHTMLCell(170, 36, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
 
