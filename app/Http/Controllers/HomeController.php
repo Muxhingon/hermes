@@ -62,5 +62,8 @@ class HomeController extends Controller
     public function NDAmensajero(){
       return view('NDA.mensajero');
     }
+    public function NDAintendencia(){
+      return view('NDA.intendencia');
+    }
 
 }
