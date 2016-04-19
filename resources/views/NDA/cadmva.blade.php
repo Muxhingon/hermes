@@ -21,7 +21,7 @@
 
 
 <br />
-  <form action="{{asset('php/temp/nda_cadmva.php')}}" target="_blank" method="post">
+  <form action="{{asset('php/temp/nda_planeacion.php')}}" target="_blank" method="post">
 
         <div class="col-md-12">
           <h2>Datos sobre Consorcio HERMES y su Representante Legal</h2>
@@ -330,7 +330,9 @@
 
 
     <div class="row">
-      <button type="submit" class="btn btn-default col-md-offset-9">Enviar</button>
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-default col-md-offset-9">Enviar</button>
+      </div>
     </div>
 
 

@@ -56,8 +56,8 @@ $separada_poliza = explode('/', $fecha_poliza);
 $dia_poliza = $separada_poliza[0];
 $mes_poliza = $separada_poliza[1];
 $anio_nda = $separada_poliza[2];
-define('opbm', strtolower($meses[$dia_poliza-1]));
-define('opbd', strtolower($dias[$mes_poliza-1]));
+define('opbm', strtolower($meses[$mes_poliza-1]));
+define('opbd', strtolower($dias[$dia_poliza-1]));
 define('opbn', strtolower($anio[$anio_nda-2001]));
 
 
