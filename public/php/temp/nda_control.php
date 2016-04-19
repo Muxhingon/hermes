@@ -56,8 +56,8 @@ $separada_poliza = explode('/', $fecha_poliza);
 $dia_poliza = $separada_poliza[0];
 $mes_poliza = $separada_poliza[1];
 $anio_nda = $separada_poliza[2];
-define('opbm', strtolower($meses[$dia_poliza-1]));
-define('opbd', strtolower($dias[$mes_poliza-1]));
+define('opbm', strtolower($meses[$mes_poliza-1]));
+define('opbd', strtolower($dias[$dia_poliza-1]));
 define('opbn', strtolower($anio[$anio_nda-2001]));
 
 
@@ -190,7 +190,7 @@ define('COSTADO'," POR “CONSORCIO HERMES” ".REPRESENTANTE."         “EL TR
 if(ClauB=='1'){
   $textoCB='contenido de los Estatutos de la Escritura Pública descrita en el apartado anterior manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.';
 }else if(ClauB=='2'){
-  $textoCB="Instrumento Público No.".numeroinst." de fecha ".opbd." de ".opbm." de Dos Mil ".opbn;
+  $textoCB="Instrumento Público No.".numeroinst." de fecha ".opbd." de ".opbm." de dos mil ".opbn;
   $textoCB.=" otorgado ante la fe del Fedatario Público ".NOMBRE_PUBLICO  ;
 
   if(NOTARIO_O_CORREDOR==1){
@@ -203,7 +203,7 @@ if(ClauB=='1'){
     $textoCB.=NUMERO_CORREDOR;
     $textoCB.=" en ".CORREDOR_ESTADO;
   }
-  $textoCB.=" inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31222 (treinta y un mil trescientos veintidós) correspondiente a “CONSORCIO HERMES”, manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.";
+
 }
 
 
@@ -225,6 +225,8 @@ $dom_emp = DOMICILIO_EMPLEADO;
 $correo_emp = EMAIL_EMPLEADO;
 
 $fechaCont=" ".DIA_CONT." de ".MES_CONT." de "." dos mil ".ANIO_CONT;
+
+
 
 
 
@@ -328,10 +330,15 @@ $pdf->MultiCell(170, 5,$txt, 0, 'J', 0, 2, 15 ,25, true);
 $pdf->SetFont('helvetica', '', 12);
 $pdf->Ln();
 
-$txt="<b>Única.-</b> Llamarse como ha quedado indicado al rubro del presente documento, ser de nacionalidad $textoUNICA ser de $edad_emp años de edad, con domicilio para oír y recibir notificaciones derivadas o relacionadas con el presente instrumento en $dom_emp y correo electrónico
+$txt="<b>A) </b> Llamarse como ha quedado indicado al rubro del presente documento, ser de nacionalidad $textoUNICA ser de $edad_emp años de edad, con domicilio para oír y recibir notificaciones derivadas o relacionadas con el presente instrumento en $dom_emp y correo electrónico
 $correo_emp los cuales reconoce subsistirán para los efectos del presente contrato hasta en tanto no proporcione otros diversos por escrito a “CONSORCIO HERMES”.";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
+
+$txt="<b>B)</b> Haber sido contratado para desempeñar el puesto de titular del área de GESTIÓN Y CONTROL  en “CONSORCIO HERMES”.   ";
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
 
 $pdf->SetFont('helvetica', 'B', 12);
 $txt='III. Declaran “CONSORCIO HERMES”  y “EL TRABAJADOR”:';
@@ -441,7 +448,7 @@ $txt='<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos 
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular del área de GESTIÓN Y CONTROL, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ';
+$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular del área de GESTIÓN Y CONTROL, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente:  ';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
@@ -449,11 +456,10 @@ $pdf->Ln();
 
 $txt='<b>8.1</b> La que conste en y se integre para la elaboración y actualización de contratos de personal;<br />
 <b>8.2</b> La referente a documentación legal de “CONSORCIO HERMES” tales como permisos, licencias o autorizaciones;<br />
-<b>8.3</b> La contenida en instrumentos otorgados ante fedatario público tales como actas, pólizas o testimonios;<br />
+<b>8.2</b> La contenida en instrumentos otorgados ante fedatario público tales como actas, pólizas o testimonios;<br />
 <b>8.4</b> La relativa a la elaboración de contratos con proveedores y prestadores de bienes y servicios;<br />
 <b>8.5</b>  La referente a la elaboración de contratos con clientes;<br />
 <b>8.6</b> Aquella relacionada con los términos de operación comercial establecidos con cada cliente;<br />
-<b>8.7</b> La correspondiente a las garantías emitidas por “CONSORCIO HERMES”;<br />
 
 ';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
@@ -475,11 +481,12 @@ $pdf->SetFont('helvetica', '', 12);
 
 
 $txt='
+<b>8.7</b> La correspondiente a las garantías emitidas por “CONSORCIO HERMES”;<br />
 <b>8.8</b> La derivada de sus funciones de representación de “LA EMPRESA”;<br />
 <b>8.9</b> La correspondiente a los servicios profesionales que contrate “CONSORCIO HERMES”;<br />
 <b>8.10</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
 <b>8.11</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados al área de GESTIÓN Y CONTROL.';
-$pdf->writeHTMLCell(170, 44, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$pdf->writeHTMLCell(170, 46, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
 

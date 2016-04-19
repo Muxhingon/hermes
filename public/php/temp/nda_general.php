@@ -56,8 +56,8 @@ $separada_poliza = explode('/', $fecha_poliza);
 $dia_poliza = $separada_poliza[0];
 $mes_poliza = $separada_poliza[1];
 $anio_nda = $separada_poliza[2];
-define('opbm', strtolower($meses[$dia_poliza-1]));
-define('opbd', strtolower($dias[$mes_poliza-1]));
+define('opbm', strtolower($meses[$mes_poliza-1]));
+define('opbd', strtolower($dias[$dia_poliza-1]));
 define('opbn', strtolower($anio[$anio_nda-2001]));
 
 
@@ -203,7 +203,7 @@ if(ClauB=='1'){
     $textoCB.=NUMERO_CORREDOR;
     $textoCB.=" en ".CORREDOR_ESTADO;
   }
-  $textoCB.=" inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31222 (treinta y un mil trescientos veintidós) correspondiente a “CONSORCIO HERMES”, manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.";
+
 }
 
 
@@ -249,7 +249,7 @@ $pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
 $pdf->StopTransform();
 
 $cb=ClauB;
-$txt=$cb."CONVENIO DE CONFIDENCIALIDAD QUE CELEBRAN POR UNA PARTE CONSORCIO HERMES, S.A DE C.V., POR CONDUCTO DE SU REPRESENTANTE LEGAL $representante A QUIEN EN ADELANTE SE LE DENOMINARÁ INDISTINTAMENTE “CONSORCIO HERMES” O “LA EMPRESA” Y POR OTRA PARTE $empleado QUIEN INTERVIENE PERSONALMENTE Y POR DERECHO PROPIO A QUIEN EN ADELANTE SE LE DENOMINARÁ “EL TRABAJADOR”, DE ACUERDO CON LAS SIGUIENTES:";
+$txt="CONVENIO DE CONFIDENCIALIDAD QUE CELEBRAN POR UNA PARTE CONSORCIO HERMES, S.A DE C.V., POR CONDUCTO DE SU REPRESENTANTE LEGAL $representante A QUIEN EN ADELANTE SE LE DENOMINARÁ INDISTINTAMENTE “CONSORCIO HERMES” O “LA EMPRESA” Y POR OTRA PARTE $empleado QUIEN INTERVIENE PERSONALMENTE Y POR DERECHO PROPIO A QUIEN EN ADELANTE SE LE DENOMINARÁ “EL TRABAJADOR”, DE ACUERDO CON LAS SIGUIENTES:";
 
 $pdf->SetFont('helvetica', 'B', 12);
 $pdf->MultiCell(170, 5,$txt, 0, 'J', 0, 2, 15 ,25, true);
@@ -475,7 +475,7 @@ $txt='<b>9.1 </b> una cantidad igual al cincuenta por ciento del monto total que
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='<b>9.2</b>  una cantidad equivalente en moneda nacional a USD $30´000.00 (Treinta Mil Dólares 00/100, moneda de curso legal en los Estados Unidos de América) si este monto resultase mayor que aquel obtenido conforme al inciso a) de esta Claúsula.';
+$txt='<b>9.2</b>  una cantidad equivalente en moneda nacional a USD $30´000.00 (Treinta Mil Dólares 00/100, moneda de curso legal en los Estados Unidos de América) si este monto resultase mayor que aquel obtenido conforme al inciso a) de esta Cláusula.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 

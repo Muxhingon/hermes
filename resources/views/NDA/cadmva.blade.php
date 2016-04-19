@@ -21,7 +21,7 @@
 
 
 <br />
-  <form action="{{asset('php/temp/nda_cadmva.php')}}" target="_blank" method="post">
+  <form action="{{asset('php/temp/nda_planeacion.php')}}" target="_blank" method="post">
 
         <div class="col-md-12">
           <h2>Datos sobre Consorcio HERMES y su Representante Legal</h2>
@@ -43,7 +43,7 @@
           <div class="form-group col-md-6">
             <label  for="domicilio_empre">Domicilio determinado por la dirección general  </label>
             <input required type="text" class="form-control" name="domicilio_empre" id="domicilio_empre"
-            value="Prolongación Corregidora No. 15, Colonia San Pablo, Santiago de Querétaro, Querétarox, C.P. 76130"
+            value="Prolongación Corregidora No. 15, Colonia San Pablo, Santiago de Querétaro, Querétaro, C.P. 76130"
             placeholder=" Calle , Colonia, Municipio, Estado , C.P.">
           </div>
         </div>
@@ -330,7 +330,9 @@
 
 
     <div class="row">
-      <button type="submit" class="btn btn-default col-md-offset-9">Enviar</button>
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-default col-md-offset-9">Enviar</button>
+      </div>
     </div>
 
 
@@ -378,7 +380,8 @@ $.datepicker.setDefaults($.datepicker.regional['es']);
     $("#fecha_contLab").datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '2000:2031',
+      yearRange: '2005:2031',
+      minDate: new Date('7/8/2005'),
       onClose: function( selectedDate ) {
         $( "#fecha_NDA" ).datepicker( "option", "minDate", selectedDate );
       }
@@ -387,12 +390,13 @@ $.datepicker.setDefaults($.datepicker.regional['es']);
     $( "#fecha_NDA" ).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '2000:2031',
+      yearRange: '2016:2031',
     });
     $( "#fecha_poliza" ).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '2000:2031',
+      minDate: new Date('7/8/2005'),
+      yearRange: '2005:2031',
     });
 
   });

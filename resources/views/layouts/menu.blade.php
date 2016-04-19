@@ -160,6 +160,17 @@
                               </li>
                             @endif
 
+                            @if($path == "nda/asistente")
+                              <li>
+                                <a class="active" href="{{ url('/nda/asistente') }}"><i class="fa fa-file fa-fw"></i> Asistente y Mensajero de DG </a>
+                              </li>
+
+                            @else
+                              <li>
+                                <a href="{{ url('/nda/asistente') }}"><i class="fa fa-file fa-fw"></i> Asistente y Mensajero de DG </a>
+                              </li>
+                            @endif
+
 
 
                           </ul>

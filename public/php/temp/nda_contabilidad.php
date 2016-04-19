@@ -56,8 +56,8 @@ $separada_poliza = explode('/', $fecha_poliza);
 $dia_poliza = $separada_poliza[0];
 $mes_poliza = $separada_poliza[1];
 $anio_nda = $separada_poliza[2];
-define('opbm', strtolower($meses[$dia_poliza-1]));
-define('opbd', strtolower($dias[$mes_poliza-1]));
+define('opbm', strtolower($meses[$mes_poliza-1]));
+define('opbd', strtolower($dias[$dia_poliza-1]));
 define('opbn', strtolower($anio[$anio_nda-2001]));
 
 
@@ -190,7 +190,7 @@ define('COSTADO'," POR “CONSORCIO HERMES” ".REPRESENTANTE."         “EL TR
 if(ClauB=='1'){
   $textoCB='contenido de los Estatutos de la Escritura Pública descrita en el apartado anterior manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.';
 }else if(ClauB=='2'){
-  $textoCB="Instrumento Público No.".numeroinst." de fecha ".opbd." de ".opbm." de Dos Mil ".opbn;
+  $textoCB="Instrumento Público No.".numeroinst." de fecha ".opbd." de ".opbm." de dos mil ".opbn;
   $textoCB.=" otorgado ante la fe del Fedatario Público ".NOMBRE_PUBLICO  ;
 
   if(NOTARIO_O_CORREDOR==1){
@@ -203,7 +203,7 @@ if(ClauB=='1'){
     $textoCB.=NUMERO_CORREDOR;
     $textoCB.=" en ".CORREDOR_ESTADO;
   }
-  $textoCB.=" inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31222 (treinta y un mil trescientos veintidós) correspondiente a “CONSORCIO HERMES”, manifestando que dichas facultades, conforme a las cuales actúa, no le han sido revocadas, modificadas ni limitadas de manera alguna.";
+
 }
 
 
@@ -330,10 +330,15 @@ $pdf->MultiCell(170, 5,$txt, 0, 'J', 0, 2, 15 ,25, true);
 $pdf->SetFont('helvetica', '', 12);
 $pdf->Ln();
 
-$txt="<b>Única.-</b> Llamarse como ha quedado indicado al rubro del presente documento, ser de nacionalidad $textoUNICA ser de $edad_emp años de edad, con domicilio para oír y recibir notificaciones derivadas o relacionadas con el presente instrumento en $dom_emp y correo electrónico
+$txt="<b>A) </b> Llamarse como ha quedado indicado al rubro del presente documento, ser de nacionalidad $textoUNICA ser de $edad_emp años de edad, con domicilio para oír y recibir notificaciones derivadas o relacionadas con el presente instrumento en $dom_emp y correo electrónico
 $correo_emp los cuales reconoce subsistirán para los efectos del presente contrato hasta en tanto no proporcione otros diversos por escrito a “CONSORCIO HERMES”.";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
+
+$txt="<b>B)</b> Haber sido contratado para desempeñar el puesto de titular del área de CONTABILIDAD  en “CONSORCIO HERMES”.";
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
 
 $pdf->SetFont('helvetica', 'B', 12);
 $txt='III. Declaran “CONSORCIO HERMES”  y “EL TRABAJADOR”:';

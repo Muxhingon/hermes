@@ -335,7 +335,7 @@ $correo_emp los cuales reconoce subsistirán para los efectos del presente contr
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="<b>B)</b> Haber sido contratado para desempeñar el puesto de titular del área de FACTURACIÓN en “CONSORCIO HERMES”. ";
+$txt="<b>B)</b> Haber sido contratado para desempeñar el puesto de MENSAJERO Y ASISTENTE DE LA DIRECCIÓN GENERAL  en “CONSORCIO HERMES”. ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
@@ -444,21 +444,24 @@ $pdf->Ln();
 
 
 
-$txt='<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular del área de FACTURACIÓN tenga acceso o constituyan actividades inherentes a la descripción de su puesto.';
+$txt='<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que como MENSAJERO Y ASISTENTE DE LA DIRECCIÓN GENERAL tenga acceso o constituyan actividades inherentes a la descripción de su puesto.
+';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular del área de FACTURACIÓN, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente:  ';
+$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como MENSAJERO Y ASISTENTE DE LA DIRECCIÓN GENERAL, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente:';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
 
-$txt="<b>8.1</b> El listado de clientes de “LA EMPRESA”;<br />
-<b>8.2</b> La referente a identificación de clientes proporcionadas por “LA EMPRESA” para realizar funciones de ventas por teléfono, telemarketing y de mostrador;<br />
-<b>8.3</b> La que obtenga como consecuencia de su contacto y comunicación con clientes;<br />
-<b>8.4</b> La referente a ventas de LA EMPRESA” realizadas por teléfono, telemarketing y de mostrador;<br />
-<b>8.5</b> La contenida en los contratos o documentación que se generen o se integre como consecuencia de acciones vinculadas a la realización de operaciones de “LA EMPRESA” tendentes a posibles ventas por teléfono, telemarketing o de mostrador  aun cuando las mismas no se hayan concretado;<br />
+$txt="<b>8.1</b> La relativa a los domicilios de proveedores y prestadores de bienes y servicios de “LA EMPRESA”;<br />
+<b>8.2</b> La referente a los domicilios de clientes de “LA EMPRESA”;<br />
+<b>8.3</b> La correspondiente a las rutas de entrega y cobranza de “LA EMPRESA”;<br />
+<b>8.4</b> La contenida en la documentación que le sea encomendada para su entrega y recepción dentro y fuera de la empresa;<br />
+<b>8.5</b> La derivada de fechas, contactos y circunstancias que se presenten en torno  de la documentación que le sea encomendada para su entrega y recepción dentro y fuera de la empresa;<br />
+<b>8.6</b> Cualquiera que obre en documentos aun y cuando se encuentren colocados a simple vista en las oficinas del Director General de “LA EMPRESA”, o en su domicilio personal ;<br />
+
 ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
@@ -479,9 +482,13 @@ $pdf->SetFont('helvetica', '', 12);
 
 
 $txt='
-<b>8.6</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
-<b>8.7</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados al área de FACTURACIÓN.';
-$pdf->writeHTMLCell(170, 26, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+<b>8.7</b> La derivada de conversaciones realizadas por el Director General de “LA EMPRESA”;<br />
+<b>8.8</b> La que se desprenda de reuniones de trabajo celebradas por el Director General”;<br />
+<b>8.9</b> La relativa al o los domicilios del Director General, su cónyuge, ascendientes y descendientes;<br />
+<b>8.10</b> La referente a circunstancias y documentación personal del Director General, sus operaciones financieras, transacciones, pagos, compras, ventas, y actividades;<br />
+<b>8.11</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
+<b>8.12</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados como MENSAJERO Y ASISTENTE DE LA DIRECCIÓN GENERAL.';
+$pdf->writeHTMLCell(170, 70, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
 
@@ -499,14 +506,7 @@ $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
-$txt='<b>11.1</b>  Una cantidad igual al cincuenta por ciento del monto total que por concepto de pago por los daños y perjuicios causados se imponga en la sentencia a la persona física o moral que se declare responsable, o  ';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
 
-
-$txt='<b>11.2</b>   Una cantidad equivalente en moneda nacional a USD $30´000.00 (Treinta Mil Dólares 00/100, moneda de curso legal en los Estados Unidos de América) si este monto resultase mayor que aquel obtenido conforme al inciso 11.1 de esta Cláusula.  ';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
 
 
 
@@ -525,9 +525,18 @@ $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
 
+$txt='<b>11.1</b>  Una cantidad igual al cincuenta por ciento del monto total que por concepto de pago por los daños y perjuicios causados se imponga en la sentencia a la persona física o moral que se declare responsable, o  ';
+$pdf->writeHTMLCell(170, 20, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$pdf->Ln();
+
+
+$txt='<b>11.2</b>   Una cantidad equivalente en moneda nacional a USD $30´000.00 (Treinta Mil Dólares 00/100, moneda de curso legal en los Estados Unidos de América) si este monto resultase mayor que aquel obtenido conforme al inciso 11.1 de esta Cláusula.  ';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
 
 $txt="Esta Cláusula será de vigencia indefinida, y en todo caso se mantendrá vigente durante todo el tiempo en que dure el procedimiento jurisdiccional entablado por “CONSORCIO HERMES” en contra de la persona física o moral que contrate a “EL TRABAJADOR” y cesará hasta concluidos tres años posteriores a que se dicte sentencia definitiva que declare responsabilidad y determine el pago de daños y perjuicios en favor de “CONSORCIO HERMES” como consecuencia de la conculcación de lo establecido en el artículo 86 de la Ley de la Propiedad Industrial.";
-$pdf->writeHTMLCell(170, 43, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 $txt='“CONSORCIO HERMES” se reserva el derecho de demandar directamente a “EL TRABAJADOR” cuando considere que se actualiza el supuesto previsto en el artículo 86 de la Ley de la Propiedad Industrial (in fine) o cualquier otra  violación a lo establecido en el presente Convenio. ';
