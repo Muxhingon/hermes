@@ -25,3 +25,4 @@ Route::get('/nda/operaciones', 'HomeController@NDAoperaciones');
 Route::get('/nda/facturacion', 'HomeController@NDAfacturacion');
 Route::get('/nda/mensajero', 'HomeController@NDAmensajero');
 Route::get('/nda/intendencia', 'HomeController@NDAintendencia');
+Route::get('/nda/asistente', 'HomeController@NDAasistente');

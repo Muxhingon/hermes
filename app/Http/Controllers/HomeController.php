@@ -66,4 +66,8 @@ class HomeController extends Controller
       return view('NDA.intendencia');
     }
 
+    public function NDAasistente(){
+      return view('NDA.asistente');
+    }
+
 }
