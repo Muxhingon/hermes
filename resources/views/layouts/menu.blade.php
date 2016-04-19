@@ -149,6 +149,18 @@
                             @endif
 
 
+                            @if($path == "nda/intendencia")
+                              <li>
+                                <a class="active" href="{{ url('/nda/intendencia') }}"><i class="fa fa-file fa-fw"></i> Intendencia </a>
+                              </li>
+
+                            @else
+                              <li>
+                                <a href="{{ url('/nda/intendencia') }}"><i class="fa fa-file fa-fw"></i> Intendencia </a>
+                              </li>
+                            @endif
+
+
 
                           </ul>
                         </li>
