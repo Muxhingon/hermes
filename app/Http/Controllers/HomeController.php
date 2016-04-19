@@ -59,5 +59,8 @@ class HomeController extends Controller
       return view('NDA.facturacion');
     }
 
+    public function NDAmensajero(){
+      return view('NDA.mensajero');
+    }
 
 }

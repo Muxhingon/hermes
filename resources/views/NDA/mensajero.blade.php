@@ -10,7 +10,7 @@
 
 <br />
 <div class="col-md-12">
-  <h1>Formulario para generar NDA Contabilidad</h1>
+  <h1>Formulario para generar NDA Mensajero</h1>
   <p class="text-info">
     Por favor proporcione la información que requieren los campos, es muy importante seguir las secuencias, orden y características en que se plantea la presentación de los datos
   </p>
@@ -21,7 +21,7 @@
 
 
 <br />
-  <form action="{{asset('php/temp/nda_contabilidad.php')}}" target="_blank" method="post">
+  <form action="{{asset('php/temp/nda_mensajero.php')}}" target="_blank" method="post">
 
         <div class="col-md-12">
           <h2>Datos sobre Consorcio HERMES y su Representante Legal</h2>
@@ -43,7 +43,7 @@
           <div class="form-group col-md-6">
             <label  for="domicilio_empre">Domicilio determinado por la dirección general  </label>
             <input required type="text" class="form-control" name="domicilio_empre" id="domicilio_empre"
-            value="Prolongación Corregidora No. 15, Colonia San Pablo, Santiago de Querétaro, Querétaro, C.P. 76130"
+            value="Prolongación Corregidora No. 15, Colonia San Pablo, Santiago de Querétaro, Querétaro , C.P. 76130"
             placeholder=" Calle , Colonia, Municipio, Estado , C.P.">
           </div>
         </div>

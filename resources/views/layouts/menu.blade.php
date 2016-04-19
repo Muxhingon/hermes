@@ -137,6 +137,17 @@
                               </li>
                             @endif
 
+                            @if($path == "nda/mensajero")
+                              <li>
+                                <a class="active" href="{{ url('/nda/mensajero') }}"><i class="fa fa-file fa-fw"></i> Mensajero </a>
+                              </li>
+
+                            @else
+                              <li>
+                                <a href="{{ url('/nda/mensajero') }}"><i class="fa fa-file fa-fw"></i> Mensajero </a>
+                              </li>
+                            @endif
+
 
 
                           </ul>

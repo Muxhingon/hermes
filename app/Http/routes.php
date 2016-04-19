@@ -23,3 +23,4 @@ Route::get('/nda/planeacion', 'HomeController@NDAplaneacion');
 Route::get('/nda/control', 'HomeController@NDAcontrol');
 Route::get('/nda/operaciones', 'HomeController@NDAoperaciones');
 Route::get('/nda/facturacion', 'HomeController@NDAfacturacion');
+Route::get('/nda/mensajero', 'HomeController@NDAmensajero');

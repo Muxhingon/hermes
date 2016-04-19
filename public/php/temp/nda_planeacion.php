@@ -33,9 +33,9 @@ $dia_contlab = $separada_cont[0];
 $mes_contlab = $separada_cont[1];
 $anio_contlab = $separada_cont[2];
 
-define('DIA_CONT',$dias[$dia_contlab-1]);
-define('MES_CONT',$meses[$mes_contlab-1]);
-define('ANIO_CONT',$anio[$anio_contlab-2001]);
+define('DIA_CONT',strtolower($dias[$dia_contlab-1]));
+define('MES_CONT',strtolower($meses[$mes_contlab-1]));
+define('ANIO_CONT',strtolower($anio[$anio_contlab-2001]));
 
 
 //FECHA DEL NDA
@@ -56,9 +56,9 @@ $separada_poliza = explode('/', $fecha_poliza);
 $dia_poliza = $separada_poliza[0];
 $mes_poliza = $separada_poliza[1];
 $anio_nda = $separada_poliza[2];
-define('opbm', $meses[$dia_poliza-1]);
-define('opbd', $dias[$mes_poliza-1]);
-define('opbn', $anio[$anio_nda-2001]);
+define('opbm', strtolower($meses[$dia_poliza-1]));
+define('opbd', strtolower($dias[$mes_poliza-1]));
+define('opbn', strtolower($anio[$anio_nda-2001]));
 
 
 
@@ -266,7 +266,7 @@ $pdf->SetFont('helvetica', '', 12);
 
 $pdf->Ln();
 $txt="
-  <b>A) </b> Que es una Sociedad Anónima de Capital Variable debidamente constituida conforme a las leyes de los Estados Unidos Mexicanos, según consta en la Escritura Pública No. 10,071 (diez mil setenta y uno), de fecha ocho de julio del año dos mil cinco, otorgada ante la fe de la licenciada Sonia Alcántara Magos  Titular de la Notaría No. 18 (dieciocho) de la Ciudad de Santiago de Querétaro, Estado de Querétaro, cuyo primer testimonio quedó inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31222/1 (treinta y un mil trescientos veintidós diagonal uno).
+  <b>A) </b> Que es una Sociedad Anónima de Capital Variable debidamente constituida conforme a las leyes de los Estados Unidos Mexicanos, según consta en la Escritura Pública No. 10,071 (diez mil setenta y uno), de fecha ocho de julio del año dos mil cinco, otorgada ante la fe de la licenciada Sonia Alcántara Magos  Titular de la Notaría No. 18 (dieciocho) de la Ciudad de Santiago de Querétaro, Estado de Querétaro, cuyo primer testimonio quedó inscrito en el Registro Público de Comercio, bajo el número de Folio Mercantil Electrónico 31322/1 (treinta y un mil trescientos veintidós diagonal uno).
  ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
