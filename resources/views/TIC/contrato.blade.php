@@ -276,7 +276,7 @@
 
     <div class="row">
       <div class="form-group col-md-2">
-        <label for="salario_diario">Monto por salario diario (Número) :</label>
+        <label for="salario_diario">Monto del salario diario (Número) :</label>
         <div class="input-group">
           <span id="salario_diario_num" class="input-group-addon">$</span>
           <input required type="text" class="form-control" name="salario_diario_num" id="salario_diario_num" placeholder="150.00">
@@ -288,13 +288,13 @@
 
     <div class="row">
       <div class="form-group col-md-5">
-        <label for="salario_diario_letra">Monto por salario diario (Letra) :</label>
+        <label for="salario_diario_letra">Monto del salario diario (Letra) :</label>
         <input required type="text" class="form-control" name="salario_diario_letra" id="salario_diario_letra" placeholder="CIENTO CINCUENTA PESOS 00/100 M.N.">
       </div>
     </div>
 
 
-    <h4>Monto por salario mensual (Número).</h4>
+    <h4>Monto del salario mensual (Número).</h4>
     <p>
       Incluyendo el pago de séptimos dias y el correspondiente a los días de descanso obligatorio :
     </p>
@@ -313,7 +313,7 @@
 
     <div class="row">
       <div class="form-group col-md-5">
-        <label for="salario_mensual_letra">Monto por salario diario (Letra) :</label>
+        <label for="salario_mensual_letra">Monto del salario mensual (Letra) :</label>
         <input required type="text" class="form-control" name="salario_mensual_letra" id="salario_mensual_letra" placeholder="CIENTO CINCUENTA PESOS 00/100 M.N.">
       </div>
     </div>

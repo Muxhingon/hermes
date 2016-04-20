@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{url('/')}}">Hermes</a>
+                <a class="navbar-brand" href="{{url('/')}}"><img  width="200px" style=" padding-top:-10px" src="{{asset('logo.png')}}" /></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -28,7 +28,7 @@
             </ul>
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
+            <div class="navbar-default sidebar" role="navigation" id="completo">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                       <li>
