@@ -221,7 +221,25 @@
         <input type="text" class="form-control" name="fecha_contLab" id="fecha_contLab" required>
       </div>
       <div class="form-group  col-md-4">
-        <input type="text" class="form-control" name="fecha_fincontLab" id="fecha_fincontLab" disabled>
+        <input type="text" class="form-control" name="fecha_fincontLab" id="fecha_fincontLab" readonly>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+      <div class="form-group col-md-5">
+        <label for="dias_trabajo">Indique los días de la semana que abarcan el periodo de trabajo :</label>
+        <input required type="text" class="form-control" name="dias_trabajo" id="dias_trabajo" placeholder="Lunes a Sábado" value="Lunes a Sábado">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-5">
+        <label for="dias_descanso">Indique el dia de la semana de descanso :</label>
+        <input required type="text" class="form-control" name="dias_descanso" id="dias_descanso" placeholder="Lunes, Sábado, Domingo" value="Domingo">
       </div>
     </div>
 
@@ -235,7 +253,7 @@
               <option value="2">
                 Nocturna - 7 horas
               </option>
-              <option value="2">
+              <option value="3">
                 Mixta - 7 horas y media
               </option>
         </select>
@@ -244,15 +262,15 @@
 
     <div class="row">
       <div class="form-group col-md-5">
-        <label for="dias_trabajo">Indique los días de la semana que abarcan el periodo de trabajo :</label>
-        <input required type="text" class="form-control" name="dias_trabajo" id="dias_trabajo" placeholder="Lunes a Sábado" value="Lunes a Sábado">
+        <label for="desde_hora">Indique la hora de inicio de la jornada en formato de 24 horas:</label>
+        <input required type="text" class="form-control" name="desde_hora" id="desde_hora" placeholder="07:00">
       </div>
     </div>
 
     <div class="row">
       <div class="form-group col-md-5">
-        <label for="dias_descanso">Indique el dia de la semana de descanso :</label>
-        <input required type="text" class="form-control" name="dias_descanso" id="dias_descanso" placeholder="Lunes, Sábado, Domingo" value="Domingo">
+        <label for="hasta_hora">Indique la hora de conclusión de la jornada en formato de 24 horas:</label>
+        <input required type="text" class="form-control" name="hasta_hora" id="hasta_hora" placeholder="16:00">
       </div>
     </div>
 

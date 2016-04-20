@@ -43,15 +43,15 @@ define('MES_INI_CONT',strtolower($meses[$mes_contlab-1]));
 define('ANIO_INI_CONT',strtolower($anio[$anio_contlab-2001]));
 
 
-$fecha_contLAB=$_POST['fecha_fincontLab'];
-$separada_cont = explode('/', $fecha_contLAB);
-$dia_contlab = $separada_cont[0];
-$mes_contlab = $separada_cont[1];
-$anio_contlab = $separada_cont[2];
+$fecha_contLABf=$_POST['fecha_fincontLab'];
+$separada_contf = explode('/', $fecha_contLABf);
+$dia_contlabf = $separada_contf[0];
+$mes_contlabf = $separada_contf[1];
+$anio_contlabf = $separada_contf[2];
 
-define('DIA_FIN_CONT',strtolower($dias[$dia_contlab-1]));
-define('MES_FIN_CONT',strtolower($meses[$mes_contlab-1]));
-define('ANIO_FIN_CONT',strtolower($anio[$anio_contlab-2001]));
+define('DIA_FIN_CONT',strtolower($dias[$dia_contlabf-1]));
+define('MES_FIN_CONT',strtolower($meses[$mes_contlabf-1]));
+define('ANIO_FIN_CONT',strtolower($anio[$anio_contlabf-2001]));
 
 
 define('REPRESENTANTE', mb_strtoupper($_POST['representante'],'UTF-8'));
@@ -75,10 +75,28 @@ define('EMAIL_EMPLEADO', $_POST['corre_emp']);
 define('PUESTO', $_POST['puesto']);
 
 
-define('DURACION_CONTRATO', $_POST['duracion_cont']);
 
 
-define('DURACION_JORNADA', $_POST['jornada']);
+if($_POST['duracion_cont']==12){
+  define('DURACION_CONTRATO', 'UN AÑO');
+}else if($_POST['duracion_cont']==1){
+  define('DURACION_CONTRATO',strtoupper($num_mes[$_POST['duracion_cont']-1])." MES");
+}else{
+  define('DURACION_CONTRATO',strtoupper($num_mes[$_POST['duracion_cont']-1])." MESES");
+}
+
+
+if($_POST['jornada']==1){
+  define('DURACION_JORNADA', 'OCHO HORAS');
+}else if($_POST['jornada']==2){
+  define('DURACION_JORNADA', 'SIETE HORAS');
+}else if($_POST['jornada']==3){
+  define('DURACION_JORNADA', 'SIETE HORAS Y MEDIA');
+}
+
+define('DESDE_HORAS_JORNADA',$_POST['desde_hora']);
+define('HASTA_HORAS_JORNADA',$_POST['hasta_hora']);
+
 define('DIAS_TRABAJO',$_POST['dias_trabajo']);
 define('DIAS_DESCANSO', $_POST['dias_descanso']);
 
@@ -245,15 +263,8 @@ $pdf->Ln();
 
 
 
-$txt="<b>C)</b> Que requiere para el cumplimiento de las actividades derivadas de su Objeto Social que se vinculan con tecnología de la información y comunicaciones contratar por tiempo determinado los servicios de “EL TRABAJADOR”, por el término de ";
-if(DURACION_CONTRATO==12){
-  $txt.="UN AÑO";
-}else if(DURACION_CONTRATO==1){
-  $txt.=strtoupper($num_mes[DURACION_CONTRATO-1])." MES";
-}else{
-  $txt.=strtoupper($num_mes[DURACION_CONTRATO-1])." MESES";
-}
-$txt.=", de conformidad con lo dispuesto por el artículo 37 de la Ley Federal del Trabajo, en razón de así exigirlo la naturaleza del servicio que prestará a sus clientes, siendo esta de carácter eventual, especial y limitada al tiempo del contrato que le sea otorgado, el cual implica, respecto de proyectos concretos, el efectuar labores relacionadas con la gestión de tecnología de la información y comunicaciones bajo dependencia de “CONSORCIO HERMES”, por lo que el cliente contratante de “LA EMPRESA” establece un vínculo legal exclusivamente con“CONSORCIO HERMES” por lo que por ningún motivo el contrato celebrado por “LA EMPRESA” y alguno de sus clientes será extensible, prorrogable, sustituible o vinculante de cualquier forma con “EL TRABAJADOR”.";
+$txt="<b>C)</b> Que requiere para el cumplimiento de las actividades derivadas de su Objeto Social que se vinculan con tecnología de la información y comunicaciones contratar por tiempo determinado los servicios de “EL TRABAJADOR”, por el término de ".DURACION_CONTRATO.
+", de conformidad con lo dispuesto por el artículo 37 de la Ley Federal del Trabajo, en razón de así exigirlo la naturaleza del servicio que prestará a sus clientes, siendo esta de carácter eventual, especial y limitada al tiempo del contrato que le sea otorgado, el cual implica, respecto de proyectos concretos, el efectuar labores relacionadas con la gestión de tecnología de la información y comunicaciones bajo dependencia de “CONSORCIO HERMES”, por lo que el cliente contratante de “LA EMPRESA” establece un vínculo legal exclusivamente con“CONSORCIO HERMES” por lo que por ningún motivo el contrato celebrado por “LA EMPRESA” y alguno de sus clientes será extensible, prorrogable, sustituible o vinculante de cualquier forma con “EL TRABAJADOR”.";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
@@ -303,8 +314,7 @@ $pdf->Ln();
 $pdf->SetFont('helvetica', '', 12);
 
 
-$txt='<b>A)</b> Llamarse '.EMPLEADO.' , ser de nacionalidad '. $textoUNICA.', ser de'.
-EDAD_EMPLEADO.'años de edad, estado civil '.ESTADO_CIVIL.', con domicilio para oír y recibir notificaciones derivadas o relacionadas con el presente instrumento en '.DOMICILIO_EMPLEADO.' y correo electrónico '.EMAIL_EMPLEADO.' los cuales reconoce subsistirán para los efectos del presente contrato hasta en tanto no proporcione otros diversos por escrito a “CONSORCIO HERMES”.';
+$txt='<b>A)</b> Llamarse '.EMPLEADO.' , ser de nacionalidad '. $textoUNICA.', ser de '.EDAD_EMPLEADO.' años de edad, estado civil '.ESTADO_CIVIL.', con domicilio para oír y recibir notificaciones derivadas o relacionadas con el presente instrumento en '.DOMICILIO_EMPLEADO.' y correo electrónico '.EMAIL_EMPLEADO.' los cuales reconoce subsistirán para los efectos del presente contrato hasta en tanto no proporcione otros diversos por escrito a “CONSORCIO HERMES”.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
@@ -334,36 +344,6 @@ $pdf->Ln();
 
 
 
-$pdf->AddPage();
-
-$pdf->StartTransform();
-$pdf->Rotate(-90);
-$pdf->SetFont('helvetica', '', 9);
-$pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
-$pdf->StopTransform();
-$pdf->SetFont('helvetica', '', 12);
-
-$txt="<b>TERCERA.-</b> “EL TRABAJADOR” reconoce y acepta que cualquier información a que acceda o sea de su conocimiento derivada o  con motivo de la relación laboral que sostiene con “CONSORCIO HERMES” tiene una aplicación comercial que le permite a “LA EMPRESA” obtener o mantener una ventaja competitiva o económica frente a terceros en la realización de su actividad empresarial, en consecuencia  “CONSORCIO HERMES” ha implantado diversos controles jurídicos y tecnológicos para preservar dicha información por lo que “EL TRABAJADOR” la considerará y tratará como “CONFIDENCIAL” y “RESTRINGIDA”.";
-$pdf->writeHTMLCell(170, 45, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
-$pdf->Ln();
-
-$txt='<b>CUARTA.- </b> “CONSORCIO HERMES” almacena e integra periódicamente la información a que se refiere la Cláusula anterior en documentos, medios electrónicos o magnéticos, discos ópticos, microfilmes, películas u otros instrumentos similares como parte de su sistema de gestión del conocimiento; cualesquiera de dichos instrumentos o mecanismos que sean proporcionados a “EL TRABAJADOR” o a los cuales éste puede llegar a tener acceso con motivo de la relación laboral  que sostiene con “LA EMPRESA” tendrán el carácter de “CONFIDENCIAL” y “RESTRINGIDO”.';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
-
-
-$txt='<b>QUINTA.- </b> La Administración de “CONSORCIO HERMES” determina respecto de su información aquella que excepcionalmente debe tener carácter público acorde a sus estrategias de negocio y en estricto apego a los acuerdos de confidencialidad que suscribe con otras empresas.  Cuando cierta información propiedad o en posesión de “LA EMPRESA” es considerada pública, se publicita a través de medios de divulgación autorizados y contratados por “LA EMPRESA” y  mediante INTERNET por conducto de dominios que son adquiridos y registrados por “CONSORCIO HERMES” de manera directa o a través de sus subsidiarias siendo el principal el ubicado en la dirección electrónica www.consorciohermes.mx.  En ningún otro caso “EL TRABAJADOR” podrá asumir o inferir que la información  de “LA EMPRESA” es pública y de detectar algún supuesto que lo implique deberá reportarlo inmediatamente por escrito a la Dirección General de “CONSORCIO HERMES”.';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
-
-
-$txt='<b>SEXTA.-</b>  Cuando “EL TRABAJADOR” actúe bajo cualquier figura en representación o a nombre de “CONSORCIO HERMES” o intervenga en procedimientos de licitación, adquisición o de concurso de los sectores público o privado o realice cualquier acción de comercialización o participe en cualesquiera de las diversas actividades que involucra el Objeto Social de “LA EMPRESA”,  o tenga encomendado intervenir en la ejecución de proyectos sujetos a derechos y obligaciones acordados por “CONSORCIO HERMES”, deberá asumir como “CONFIDENCIAL” la información que le sea proporcionada por terceros, el cliente, sus representantes o sus trabajadores.';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
-
-$txt='“EL TRABAJADOR” que participe en los supuestos señalados en la presente Cláusula asumirá respecto de la información que se le haya proporcionado o sobre la cual tuvo conocimiento, la obligación de incorporarla  de manera intelegible en archivos de texto que deberán almacenarse mediante el uso de medios electrónicos en discos ópticos o discos duros de y bajo control de “LA EMPRESA”, mismos que se sujetarán al proceso de seguridad e encriptación que establezca la Administración de “CONSORCIO HERMES”.  Esta obligación subsistirá aun y cuando “EL TRABAJADOR” estime o reciba autorización del  tercero, el  cliente, su representante o trabajador con el cual hubiere interactuado que le permita asumir la posibilidad de tratar la información mencionada de forma distinta.';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
 
 
 
@@ -379,42 +359,92 @@ $pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
 $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
-
-$txt="Es responsabilidad de “CONSORCIO HERMES” y no de “EL TRABAJADOR” determinar el destino final de la información a que se refiere esta Cláusula, su entrega posterior, conservación o destrucción según los acuerdos comerciales aplicables.  Una vez almacenada la información en los discos ópticos o discos duros a que se refiere el párrafo anterior la información almacenada además de “CONFIDENCIAL” se considerará “RESTRINGIDA”.";
-$pdf->writeHTMLCell(170, 37, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$txt="<b>E)</b> Que ha sido enterado de la obligación que asume respecto de la información de la empresa, la cuál en todo momento será de carácter confidencial,  ya que dicha información significa la obtención de ventaja competitiva y económica frente a terceros en la realización de sus actividades económicas. La información que “EL TRABAJADOR” conoce y se compromete a manejar como de carácter confidencial y los términos a que se sujetará en ello se encuentran comprendidos en el Convenio de Confidencialidad ha suscribir con “CONSORCIO HERMES”, por lo que el trabajador en caso de faltar a lo establecido en dicho Convenio de Confidencialidad acepta que será razón suficiente para dar por terminada la relación de trabajo entre “EL TRABAJADOR” y “CONSORCIO HERMES”, lo anterior con independencia de la responsabilidad que se genere y la reparación de los daños y perjuicios que provoque la infracción a la secrecía que debe guardar en los términos de la ley y los acordados en dicho Convenio de Confidencialidad.";
+$pdf->writeHTMLCell(170, 75, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
-
-$txt=' A través del presente instrumento “CONSORCIO HERMES” autoriza a “EL TRABAJADOR” para utilizar la información a que se refiere la presente cláusula exclusivamente en el contexto del proyecto específico del cual emanó y hasta en tanto “EL TRABAJADOR” se encuentre asignado al mismo por parte de “LA EMPRESA”.  Una vez concluida la participación de “EL TRABAJADOR” en el proyecto éste quedará impedido de utilizar dicha información a menos que medie autorización por escrito de “CONSORCIO HERMES” que en forma expresa así lo acredite.';
+$txt='Con las anteriores declaraciones, las partes de este contrato tienen a bien otorgar las siguientes:';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-
-$txt='<b>SÉPTIMA.-</b> “EL TRABAJADOR” guardará escrupulosamente los secretos técnicos y comerciales así como de los asuntos administrativos reservados de los cuales tenga conocimiento con motivo de su contratación por parte de “CONSORCIO HERMES” y el desempeño de sus funciones.  ';
+$txt='C L Á U S U L A S';
+$pdf->SetFont('helvetica', 'BU', 12);
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->SetFont('helvetica', '', 12);
 $pdf->Ln();
 
 
-
-$txt='<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular de la DIRECCIÓN DE PLANEACIÓN tenga acceso o constituyan actividades inherentes a la descripción de su puesto.';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
-
-$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular de la DIRECCIÓN DE PLANEACIÓN, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente:  ';
+$txt='<b>PRIMERA.-</b> <b><u>OBJETO, SUBORDINACIÓN, SERVICIOS Y PUESTO DE TRABAJO.-</u></b> El presente contrato tiene por objeto determinar, los derechos y obligaciones, así como las condiciones en la relación de trabajo que se establece entre “CONSORCIO HERMES” y “EL TRABAJADOR”, consistente en la prestación de los servicios personales de “EL TRABAJADOR”, bajo el mando y orden de “CONSORCIO HERMES”, en el lugar y establecimiento que será indicado y designado a “EL TRABAJADOR” por “CONSORCIO HERMES”, desempeñando en dicho lugar las actividades correspondientes al puesto de '.PUESTO.'.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
 
-$txt='<b>8.1</b> La correspondiente a los proveedores de “LA EMPRESA”;<br />
-<b>8.2</b> La referente a las condiciones acordadas con los diversos proveedores de “CONSORCIO HERMES” en materia de precios, plazos de entrega,<br /> condiciones de pago, garantías y especificaciones propias de la relación de negocio;<br />
-<b>8.3</b> La contenida en los medios de registro y control de “LA EMPRESA” sobre las condiciones acordadas con los diversos proveedores;<br />
-<b>8.4</b> La integrada y vinculada a los mecanismos o sistemas de costeo de las distintas divisiones de “LA EMPRESA”;<br />
-<b>8.5</b>La que se encuentre a cargo del área de tecnología de la información y comunicaciones de “LA EMPRESA;<br />
-<b>8.6</b> La derivada de quejas y fallas reportadas por los clientes de “LA EMPRESA”;<br />
+
+$txt='Asimismo “EL TRABAJADOR” conviene expresamente que desempeñará las actividades que “CONSORCIO HERMES” le instruya de acuerdo con las necesidades del servicio, sus conocimientos, habilidades, experiencia, capacitación y grado de confianza depositada, de tal manera que “EL TRABAJADOR” podrá llevar a cabo sus labores en relación con el trabajo contratado desarrollándolo con su mayor cuidado, esmero y eficiencia.';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+$txt='<b>SEGUNDA.-</b> <b><u>DURACIÓN DEL CONTRATO.-</u></b> El presente contrato, por la naturaleza del o los servicios que “CONSORCIO HERMES” prestará a sus clientes, tendrá una duración de '.DURACION_CONTRATO.' por lo que su vigencia será del '.DIA_INI_CONT.' de '.MES_INI_CONT.' de dos mil '.ANIO_INI_CONT.' día de su firma, al '.DIA_FIN_CONT.' de '.MES_FIN_CONT.' de dos mil '.ANIO_FIN_CONT.', o antes si por cualquier motivo se extinguiera la causa que le da origen y por tanto la materia de trabajo que este contrato regula, desde luego sin responsabilidad para cualquiera de sus partes, toda vez que la naturaleza del trabajo es transitoria.
 ';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
+
+
+
+
+
+
+
+
+
+
+$pdf->AddPage();
+
+$pdf->StartTransform();
+$pdf->Rotate(-90);
+$pdf->SetFont('helvetica', '', 9);
+$pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
+$pdf->StopTransform();
+$pdf->SetFont('helvetica', '', 12);
+
+
+$txt="La actividad de “EL TRABAJADOR” tiene por objeto iniciar, desarrollar, ejecutar y concluir asidua y oportunamente los servicios transitorios que se especifican en el apartado de declaraciones del presente Contrato, las cuales se tienen aquí por reproducidas como si a la letra se insertaran, con lo que las partes manifiestan su conformidad que terminado el plazo estipulado que es la duración del presente Contrato, terminará en todos sus efectos, como lo dispone la fracción III del artículo 53, de la Ley Federal del Trabajo.";
+$pdf->writeHTMLCell(170, 43, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$pdf->Ln();
+
+
+$txt='El presente Contrato solo podrá prorrogarse por una sola vez por un término igual a su duración original, es decir '.DURACION_CONTRATO.', siempre que exista el consenso de ambas partes, que persista la materia origen del contrato y siempre que no sobrevenga imposibilidad por el agotamiento de la materia del trabajo.';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+
+$txt='<b>TERCERA.-</b> <b><u>JORNADA DE TRABAJO.-</u></b> Se pacta una jornada de trabajo diurna continua la cuál será de '.DURACION_JORNADA.' diarias, desempeñando sus labores dentro del horario comprendido de las '.DESDE_HORAS_JORNADA.' horas a las '.HASTA_HORAS_JORNADA.' horas los días de '.DIAS_TRABAJO.'; contando con media hora diaria para tomar sus alimentos fuera del lugar donde presta sus servicios. El horario será señalado por “LA EMPRESA” de acuerdo a sus necesidades.';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+
+
+$txt='“EL TRABAJADOR” gozará por cada seis días de trabajo un día de descanso, el cual se conviene que sea los días '.DIAS_DESCANSO.' de cada semana, con goce de salario íntegro; asimismo disfrutará de los días señalados de descanso obligatorio por el artículo 74 (setenta y cuatro) de la Ley Federal del Trabajo; conforme a las necesidades del servicio y a las indicaciones de “LA EMPRESA”.';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+$txt='“EL TRABAJADOR” se obliga a laborar tiempo extra únicamente en los términos del artículo 66 (sesenta y seis) de la Ley federal del Trabajo, en la inteligencia de que solo se considerarán y pagarán como horas extraordinarias las que excedan del tiempo semanal establecido por Ley y que hayan sido previamente autorizadas en forma escrita por “LA EMPRESA” o por persona autorizada para ello, ya que en todos los casos queda expresamente prohibido que “EL TRABAJADOR” labore tiempo extra, salvo contar con el permiso mediante orden por escrito referido en este párrafo.  En caso contrario no le será cubierta a “EL TRABAJADOR” ningún tipo de prestación por hora extraordinaria. ';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+
+
+$txt='<b>CUARTA.-</b> <b><u>SALARIO.-</u></b> “EL TRABAJADOR” percibirá por el trabajo prestado objeto de este contrato, un salario diario de $'.SALARIO_DIA_NUM.' ( '.SALARIO_DIA_LETRA.' )';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+
+$txt='Es decir $'.SALARIO_MENS_NUM.' ( '.SALARIO_MENS_LETRA.' ) como salario mensual por el trabajo desempeñado conforme a la cláusula TERCERA del presente Contrato; suma en que se incluye el pago de séptimos días y el correspondiente a los días de descanso obligatorio. El pago será hecho en moneda mexicana de curso legal corriente, los días 15 (quince) y 30 (treinta) de cada mes, mediante transferencia electrónica.';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+
 
 
 
