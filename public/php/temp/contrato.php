@@ -461,33 +461,30 @@ $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
 
-$txt='
-<b>8.7</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
-<b>8.8</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados a la DIRECCIÓN DE PLANEACIÓN.';
-$pdf->writeHTMLCell(170, 26, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$txt='<b>QUINTA.-</b> <b><u>VACACIONES.-</u></b> En caso de que “EL TRABAJADOR” cumpla un año de servicios, disfrutará de un periodo de vacaciones pagadas de 6 (seis) días, que aumentara en 2 (dos) días  laborales hasta llegar a 12 (doce) por cada año subsecuente de servicios de producirse tal supuesto. Igualmente después del quinto año aumentará en 2 (dos) días por cada cinco años de servicios, o bien la parte proporcional de acuerdo al tiempo laborado.';
+$pdf->writeHTMLCell(170, 36, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
 
-$txt='<b>NOVENA.-</b> “EL TRABAJADOR” considerará como secretos técnicos y comerciales cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información que conste en medios escritos o electrónicos, imágenes, video, voz o texto referente al nombre o nombres de clientes actuales o potenciales, negociaciones, metodologías, fórmulas de negocios, planes de trabajo, compilaciones o registros, información relativa a investigaciones o estudios sobre “LA EMPRESA”, registros de desarrollo de proyectos o investigaciones que realice o contrate “CONSORCIO HERMES” sea total o relativa a cualquiera de sus etapas, inventos, información proporcionada por sus clientes, capacidad tecnológica y programas de cómputo, así como cualquier información en que se exprese o se ostente la leyenda “Información Confidencial” incluso cuando “EL TRABAJADOR” haya intervenido en su conformación.';
+$txt='<b>SEXTA.-</b> <b><u>AGUINALDO.-</u></b> Las partes convienen que “EL TRABAJADOR” tendrá derecho a un aguinaldo anual, el cual deberá ser pagado por “EL PATRÓN” antes del veinte de diciembre de cada año, equivalente a quince días de salario, o bien la parte proporcional que le corresponda de acuerdo al tiempo laborado en el año conforme al presente Contrato.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
-$txt='<b>DÉCIMA.-</b> “EL TRABAJADOR” manifiesta que conoce los alcances del artículo 86 de la Ley de la Propiedad Industrial el cual establece que <i>“la persona física o moral que contrate a un trabajador que esté laborando o haya laborado o a un profesionista, asesor o consultor que preste o haya prestado sus servicios para otra persona, con el fin de obtener secretos industriales de ésta, será responsable del pago de daños y perjuicios que le ocasione a dicha persona. También será responsable del pago de daños y perjuicios la persona física o moral que por cualquier medio ilícito obtenga información que contemple un secreto industrial”.</i> ';
+$txt='<b>SÉPTIMA.-</b> <b><u>OBLIGACIÓN DE “EL TRABAJADOR”.-</u></b> “EL TRABAJADOR” se obliga a desempeñar sus servicios bajo la dirección de “CONSORCIO HERMES”, a cuya autoridad se encontrará subordinado en todo lo concerniente al trabajo; aceptando en todo momento realizar dichas actividades con la intensidad, cuidado y esmero apropiados y en la forma, tiempo y lugar convenidos.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='<b>DÉCIMA PRIMERA.-</b>  “CONSORCIO HERMES” y “EL TRABAJADOR” acuerdan que en caso de que “LA EMPRESA” ejerza acciones en contra de una persona física o moral que contrate a “EL TRABAJADOR” en tanto esté laborando para “LA EMPRESA” o cuando haya dejado de laborar en “CONSORCIO HERMES”, con el fin de obtener secretos industriales de “CONSORCIO HERMES”, y como resultado de dichas acciones se obtenga sentencia definitiva que  declare responsable a dicha persona física o moral de los daños y perjuicios causados a “LA EMPRESA”, con independencia de la responsabilidad penal en que se incurra, “EL TRABAJADOR” pagará a “CONSORCIO HERMES”:</i> ';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
-
-
-$txt='<b>11.1</b>  Una cantidad igual al cincuenta por ciento del monto total que por concepto de pago por los daños y perjuicios causados se imponga en la sentencia a la persona física o moral que se declare responsable, o  ';
+$txt='<b>OCTAVA.-</b> <b><u>OBLIGACIÓN DE “EL TRABAJADOR”.-</u></b> Cuando “EL TRABAJADOR” se encuentre impedido para asistir a sus labores por enfermedad, deberá dar aviso a “CONSORCIO HERMES” durante las dos primeras horas de inicio de su jornada con el fin de que, en su caso, su ausencia se considere justificada debiendo además entregar “EL TRABAJADOR” a “CONSORCIO HERMES” en un término máximo de tres días hábiles, el certificado de incapacidad que otorgue el médico correspondiente del Instituto Mexicano del Seguro Social.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
-$txt='<b>11.2</b>   Una cantidad equivalente en moneda nacional a USD $30´000.00 (Treinta Mil Dólares 00/100, moneda de curso legal en los Estados Unidos de América) si este monto resultase mayor que aquel obtenido conforme al inciso 11.1 de esta Cláusula.  ';
+$txt='<b>NOVENA.-</b> <b><u>OBLIGACIÓN DE “EL TRABAJADOR”.-</u></b> Para seguridad de los contratantes, “EL TRABAJADOR” estará obligado a someterse a los exámenes médicos que periódicamente le ordene “CONSORCIO HERMES”, en los términos de la fracción X del artículo 134 de la Ley Federal del Trabajo, en el concepto de que el médico que los practique será designado y retribuido por “CONSORCIO HERMES”.  Asimismo “EL TRABAJADOR” esta obligado a poner en práctica las medidas profilácticas y de higiene que las normas vigentes en “LA EMPRESA” determinen o las autoridades del ramo acuerden, estando sujetas ambas partes a las disposiciones que establezca la Ley del Seguro Social al respecto y en todo lo relacionado con los distintos ramos de aseguramiento que establece dicho ordenamiento.';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+$txt='<b>DÉCIMA.-</b> <b><u>OBLIGACIÓN DE “EL TRABAJADOR”.-</u></b> La información que “EL TRABAJADOR” conoce y se compromete a manejar como de carácter confidencial y los términos a que se sujetará en ello se encuentran comprendidos en el Convenio de Confidencialidad que suscribe con “CONSORCIO HERMES”, por lo que el trabajador en caso de faltar a lo establecido en dicho Convenio de Confidencialidad acepta que será razón suficiente para dar por terminada la relación de trabajo entre “EL TRABAJADOR” y “CONSORCIO HERMES”, con independencia de la responsabilidad que se genere y la reparación de los daños y perjuicios que provoque la infracción a la secrecía que debe guardar en los términos de la ley y los acordados en dicho Convenio de Confidencialidad';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
@@ -509,35 +506,33 @@ $pdf->SetFont('helvetica', '', 12);
 
 
 
-$txt="Esta Cláusula será de vigencia indefinida, y en todo caso se mantendrá vigente durante todo el tiempo en que dure el procedimiento jurisdiccional entablado por “CONSORCIO HERMES” en contra de la persona física o moral que contrate a “EL TRABAJADOR” y cesará hasta concluidos tres años posteriores a que se dicte sentencia definitiva que declare responsabilidad y determine el pago de daños y perjuicios en favor de “CONSORCIO HERMES” como consecuencia de la conculcación de lo establecido en el artículo 86 de la Ley de la Propiedad Industrial.";
-$pdf->writeHTMLCell(170, 43, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$txt="<b>DÉCIMA PRIMERA.-</b> “CONSORCIO HERMES” proporcionará a “EL TRABAJADOR” las herramientas de trabajo que sean necesarias para que pueda desempeñar adecuadamente sus actividades laborales en los lugares que le sean encomendados llevar a cabo su actividad laboral.";
+$pdf->writeHTMLCell(170, 25, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
-$txt='“CONSORCIO HERMES” se reserva el derecho de demandar directamente a “EL TRABAJADOR” cuando considere que se actualiza el supuesto previsto en el artículo 86 de la Ley de la Propiedad Industrial (in fine) o cualquier otra  violación a lo establecido en el presente Convenio. ';
+$txt='<b>DÉCIMA SEGUNDA.-</b> Al cumplirse el término por el que se celebra este Contrato, el mismo quedará terminado sin necesidad de aviso previo por haber concluido la actividad o trabajo que le dio origen.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='<b>DÉCIMA SEGUNDA.-</b> Cualquier aviso o requerimiento derivado de lo establecido en el presente Convenio deberá ser efectuado mediante servicio de mensajería por escrito y entregado en el domicilio señalado en el presente instrumento que corresponda a “CONSORCIO HERMES” o “EL TRABAJADOR” según el caso.  Simultáneamente el aviso o requerimiento será remitido por medios electrónicos a los correos electrónicos que precisan las partes en este instrumento.';
+$txt='<b>DÉCIMA TERCERA.-</b> “EL TRABAJADOR” conviene y acepta que en atención al origen excepcional del presente Contrato, no se derivan en ningún caso relaciones de carácter permanente.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='Cualquier cambio de domicilio deberá ser notificado por escrito a la otra parte con cuando menos 5 días de anticipación al día en que pretendan hacer dicho cambio, de no realizar la notificación respectiva, cualquier aviso o notificación realizada en los domicilios señalados en el presente convenio surtirán todos sus efectos.';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
-
-
-
-
-$txt='<b>DÉCIMA TERCERA.-</b> El presente Convenio contiene el acuerdo total entre las Partes con respecto a las materias aquí incluidas y sobresee y cancela todos los acuerdos, negociaciones, convenios, comunicaciones o escritos anteriores entre las Partes con relación a la materia del presente Convenio';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
-
-$txt='<b>DÉCIMA CUARTA.-</b> El uso del número singular incluye también el plural y viceversa, y el uso del género masculino incluye también el género femenino y neutro y viceversa, siempre que el sentido de este convenio lo permita.';
+$txt='<b>DÉCIMA CUARTA.-</b> “CONSORCIO HERMES” podrá dar por terminado en forma anticipada el presente contrato si por cualquier motivo se extinguiera la causa que le da origen y por tanto la materia de trabajo que este Contrato regula.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
-$txt='<b>DÉCIMA QUINTA.-</b>  Para la interpretación y cumplimiento del presente Convenio las Partes se someten expresamente a las leyes y los tribunales competentes del Estado de Querétaro, en Santiago de Querétaro renunciando a cualquier otra competencia que pudiere corresponderles por razón de sus domicilios presentes o futuros o por cualquier otra razón.';
+$txt='De la misma forma, acepta “EL TRABAJADOR” que “CONSORCIO HERMES” puede dar por terminado este contrato, en el caso de que “EL TRABAJADOR” incurra en alguna falta de las estipuladas en la Ley Federal del Trabajo.';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+$txt='<b>DÉCIMA QUINTA.-</b> “EL TRABAJADOR” está conforme en que “CONSORCIO HERMES” queda en libertad de rescindir anticipadamente al término convenido, el presente contrato por incumplimiento parcial o total de su contenido, o por ocurrir cualquiera de las causas previstas en el artículo 47 de la Ley Federal del Trabajo.';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+
+$txt='<b>DÉCIMA SEXTA.-</b> “EL TRABAJADOR” y “CONSORCIO HERMES” convienen expresamente en someterse en caso de cualquier diferencia o controversia, al texto de este Contrato. Las obligaciones y derechos que mutuamente les corresponden y que no hayan sido motivo de cláusula expresa en el presente Contrato, se sujetarán a las disposiciones de la Ley Federal del Trabajo.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
@@ -548,10 +543,10 @@ $pdf->Ln();
 $pdf->AddPage();
 $num=$pdf->getNumPages();
 $letra = $paginas[$num-1];
-$fecha = strtolower($dias[DIA-1])." de ".strtolower(MES)." de dos mil ".strtolower($anio[ANIO-2001]);
 
 
-$txt='Leído que fue por las Partes y debidamente enteradas de todas y cada una de las cláusulas y del contenido y alcance legal del presente Convenio, lo suscriben por duplicado y de conformidad, reconociendo las firmas que plasman al margen y al calce en sus '.$num.' '.$letra.' fojas útiles como las que utilizan para todos los actos jurídicos en que intervienen, en Santiago de Querétaro, Querétaro a '.$fecha  ;
+
+$txt='Las partes manifiestan haber leído y comprendido este Contrato y aceptan quedar obligados por todas y cada una de sus declaraciones y cláusulas, en testimonio de lo cual lo suscriben por duplicado y de conformidad quedando un ejemplar en poder de “EL TRABAJADOR” y otro en poder de “CONSORCIO HERMES”, reconociendo las firmas que plasman al margen y al calce en sus'.$num.' '.$letra.' fojas útiles como las que utilizan para todos los actos jurídicos en que intervienen, en Santiago de Querétaro, Querétaro a '.DIA_INI_CONT.' de '.MES_INI_CONT.' de dos mil '.ANIO_INI_CONT  ;
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 $pdf->Ln();
