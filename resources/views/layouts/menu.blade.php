@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{url('/')}}">Hermes</a>
+                <a class="navbar-brand" href="{{url('/')}}"><img  width="200px" style=" padding-top:-10px" src="{{asset('logo.png')}}" /></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -28,7 +28,7 @@
             </ul>
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
+            <div class="navbar-default sidebar" role="navigation" id="completo">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                       <li>
@@ -40,10 +40,10 @@
                         </li>
 
                         <li>
-                          @if($path == "register")
-                            <a class="active" href="{{ url('/register') }}"><i class="fa fa-th-list fa-fw"></i> Usuarios</a>
+                          @if($path == "user")
+                            <a class="active" href="{{ url('/user') }}"><i class="fa fa-th-list fa-fw"></i> Usuarios</a>
                           @else
-                            <a href="{{ url('/register') }}"><i class="fa fa-th-list fa-fw"></i> Usuarios</a>
+                            <a href="{{ url('/user') }}"><i class="fa fa-th-list fa-fw"></i> Usuarios</a>
                           @endif
                         </li>
 
@@ -172,6 +172,39 @@
                             @endif
 
 
+
+                          </ul>
+                        </li>
+
+                        <li>
+                          <a href="#" ><i class="fa fa-list-alt fa-fw" ></i>TIC</a>
+                          @if(str_contains($path,"TIC/"))
+                            <ul class="nav nav-second-level in">
+                          @else
+                            <ul class="nav nav-second-level">
+                          @endif
+
+                          @if($path == "TIC/contrato")
+                            <li>
+                              <a class="active" href="{{ url('/TIC/contrato') }}"><i class="fa fa-file fa-fw"></i> Contrato  </a>
+                            </li>
+
+                          @else
+                            <li>
+                              <a href="{{ url('/TIC/contrato') }}"><i class="fa fa-file fa-fw"></i> Contrato </a>
+                            </li>
+                          @endif
+
+                          @if($path == "TIC/nda")
+                            <li>
+                              <a class="active" href="{{ url('/TIC/nda') }}"><i class="fa fa-file fa-fw"></i> NDA  </a>
+                            </li>
+
+                          @else
+                            <li>
+                              <a href="{{ url('/TIC/nda') }}"><i class="fa fa-file fa-fw"></i> NDA </a>
+                            </li>
+                          @endif
 
                           </ul>
                         </li>

@@ -5,7 +5,12 @@
  */
 
 body {
-    background-color: #f8f8f8;
+    background-color: #D9F0EE;
+}
+
+#completo{
+  background-color: #D9F0EE;
+  padding-top: 15px;
 }
 
 #wrapper {
@@ -27,21 +32,34 @@ body {
     }
 }
 
+.navbar{
+  background-color: #D9F0EE;
+}
+
 .navbar-top-links {
     margin-right: 0;
+    color: #000 !important;
+}
+
+.navbar-top-links li a:hover {
+    background-color: #00BDB2;
+    color: #fff !important;
 }
 
 .navbar-top-links li {
     display: inline-block;
+    color: #000 !important;
 }
 
 .navbar-top-links li:last-child {
     margin-right: 15px;
+    color: #000 !important;
 }
 
 .navbar-top-links li a {
     padding: 15px;
     min-height: 50px;
+    color: #000 !important;
 }
 
 .navbar-top-links .dropdown-menu li {
@@ -88,6 +106,7 @@ body {
 .sidebar .sidebar-nav.navbar-collapse {
     padding-right: 0;
     padding-left: 0;
+
 }
 
 .sidebar .sidebar-search {
@@ -95,11 +114,23 @@ body {
 }
 
 .sidebar ul li {
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid #07A395;
+    color: #fff !important;
+}
+
+.sidebar ul li a{
+    border-bottom: 1px solid #07A395;
+    color: #000 !important;
+}
+
+.sidebar ul li a:hover {
+    background-color: #00BDB2;
+      color: #fff !important;
 }
 
 .sidebar ul li a.active {
-    background-color: #eee;
+    background-color: #00BDB2;
+      color: #fff !important;
 }
 
 .sidebar .arrow {
@@ -121,6 +152,7 @@ body {
 
 .sidebar .nav-second-level li a {
     padding-left: 37px;
+    color: #000 !important;
 }
 
 .sidebar .nav-third-level li a {

@@ -10,7 +10,7 @@
 
 <br />
 <div class="col-md-12">
-  <h1>Formulario para generar NDA Contabilidad</h1>
+  <h1>Formulario para generar NDA Personal de Tecnología de la Información y Comunicaciones</h1>
   <p class="text-info">
     Por favor proporcione la información que requieren los campos, es muy importante seguir las secuencias, orden y características en que se plantea la presentación de los datos
   </p>
@@ -21,7 +21,7 @@
 
 
 <br />
-  <form action="{{asset('php/temp/nda_contabilidad.php')}}" target="_blank" method="post">
+  <form action="{{asset('php/temp/nda_tic.php')}}" target="_blank" method="post">
 
         <div class="col-md-12">
           <h2>Datos sobre Consorcio HERMES y su Representante Legal</h2>
@@ -267,6 +267,14 @@
 
     </div>
 
+    <div class="row">
+      <div class="form-group col-md-5">
+        <label for="puesto">Puesto del trabajador:</label>
+        <input required type="text" class="form-control" name="puesto" id="puesto" placeholder="Puesto">
+      </div>
+    </div>
+    
+
     <h4>Fecha del contrato laboral</h4>
     <p>
       Esta fecha es la que corresponde a la firma del contrato laboral (Hacer Click para escoger la fecha)
@@ -277,6 +285,8 @@
         <input type="text" class="form-control" name="fecha_contLab" id="fecha_contLab" required>
       </div>
     </div>
+
+
 
 
 </div>

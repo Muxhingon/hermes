@@ -70,4 +70,12 @@ class HomeController extends Controller
       return view('NDA.asistente');
     }
 
+    public function TICcontrato(){
+      return view('TIC.contrato');
+    }
+
+    public function TICnda(){
+      return view('TIC.nda');
+    }
+
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Consorcio Hermes</title>
 
 
 
@@ -37,11 +37,19 @@
 <body>
 
     <div class="container">
+
+      <div class="row" style="padding-top:35px">
+        <div class="col-md-offset-4 col-md-4  ">
+          <img src="{{asset('logo.png')}}" class="img-responsive"/>
+        </div>
+
+      </div>
+
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Please Sign In</h3>
+                        <h3 class="panel-title">Ingresar al Sistema</h3>
                     </div>
                     <div class="panel-body">
                         <form role="form" method="POST" action="{{ url('/login') }}">
@@ -54,7 +62,7 @@
                                     <input class="form-control" placeholder="Password" name="password" type="password" value="">
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <button type="submit" href="index.html" class="btn btn-lg btn-success btn-block">Login</button>
+                                <button type="submit" href="index.html" class="btn btn-lg btn-success btn-block">Ingresar</button>
                             </fieldset>
                         </form>
                     </div>
