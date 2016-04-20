@@ -176,6 +176,28 @@
                           </ul>
                         </li>
 
+                        <li>
+                          <a href="#" ><i class="fa fa-list-alt fa-fw" ></i>TIC</a>
+                          @if(str_contains($path,"TIC/"))
+                            <ul class="nav nav-second-level in">
+                          @else
+                            <ul class="nav nav-second-level">
+                          @endif
+
+                          @if($path == "TIC/contrato")
+                            <li>
+                              <a class="active" href="{{ url('/TIC/contrato') }}"><i class="fa fa-file fa-fw"></i> Contrato  </a>
+                            </li>
+
+                          @else
+                            <li>
+                              <a href="{{ url('/TIC/contrato') }}"><i class="fa fa-file fa-fw"></i> Contrato </a>
+                            </li>
+                          @endif
+
+                          </ul>
+                        </li>
+
 
 
                     </ul>
