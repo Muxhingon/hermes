@@ -40,10 +40,10 @@
                         </li>
 
                         <li>
-                          @if($path == "register")
-                            <a class="active" href="{{ url('/register') }}"><i class="fa fa-th-list fa-fw"></i> Usuarios</a>
+                          @if($path == "user")
+                            <a class="active" href="{{ url('/user') }}"><i class="fa fa-th-list fa-fw"></i> Usuarios</a>
                           @else
-                            <a href="{{ url('/register') }}"><i class="fa fa-th-list fa-fw"></i> Usuarios</a>
+                            <a href="{{ url('/user') }}"><i class="fa fa-th-list fa-fw"></i> Usuarios</a>
                           @endif
                         </li>
 

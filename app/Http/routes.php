@@ -10,13 +10,14 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+  Route::auth();
 Route::group(['middleware' => ['web']],function(){
 
-  Route::auth();
+Route::resource('user', 'UserController');
+
 
   Route::get('/', 'HomeController@index');
-  Route::get('/register', 'HomeController@register');
+  Route::get('/dashboard', 'HomeController@index');
   Route::get('/nda/general', 'HomeController@NDAgeneral');
   Route::get('/nda/coordinacionAdministrativa', 'HomeController@NDAcadmva');
   Route::get('/nda/contabilidad', 'HomeController@NDAcontabilidad');
