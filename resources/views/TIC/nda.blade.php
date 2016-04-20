@@ -267,6 +267,14 @@
 
     </div>
 
+    <div class="row">
+      <div class="form-group col-md-5">
+        <label for="puesto">Puesto del trabajador:</label>
+        <input required type="text" class="form-control" name="puesto" id="puesto" placeholder="Puesto">
+      </div>
+    </div>
+    
+
     <h4>Fecha del contrato laboral</h4>
     <p>
       Esta fecha es la que corresponde a la firma del contrato laboral (Hacer Click para escoger la fecha)
@@ -277,6 +285,8 @@
         <input type="text" class="form-control" name="fecha_contLab" id="fecha_contLab" required>
       </div>
     </div>
+
+
 
 
 </div>

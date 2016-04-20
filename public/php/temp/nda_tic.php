@@ -99,7 +99,7 @@ define('NUMERO_PERMISO', $_POST['permiso_emp']);
 define('EDAD_EMPLEADO', $_POST['edad_emp']);
 define('DOMICILIO_EMPLEADO', $_POST['domicilio_emp']);
 define('EMAIL_EMPLEADO', $_POST['corre_emp']);
-
+define('PUESTO_EMPLEADO', $_POST['puesto']);
 
 
 
@@ -335,7 +335,7 @@ $correo_emp los cuales reconoce subsistirán para los efectos del presente contr
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="<b>B)</b> Haber sido contratado para desempeñar el puesto de MENSAJERO Y ASISTENTE DE LA DIRECCIÓN GENERAL  en “CONSORCIO HERMES”. ";
+$txt="<b>B)</b> Haber sido contratado para desempeñar el puesto de ".PUESTO_EMPLEADO.'en “CONSORCIO HERMES” mismo que implica la gestión de tecnología de la información dentro de “LA EMPRESA” y en el contexto de los proyectos donde “CONSORCIO HERMES” ofrece a sus clientes la proveeduría o la  prestación de bienes y servicios de manera singular o en conjunto con otras empresas.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
@@ -444,23 +444,21 @@ $pdf->Ln();
 
 
 
-$txt='<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que como MENSAJERO Y ASISTENTE DE LA DIRECCIÓN GENERAL tenga acceso o constituyan actividades inherentes a la descripción de su puesto.
-';
+$txt='<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de '.PUESTO_EMPLEADO.' tenga acceso o constituyan actividades inherentes a la descripción de su puesto.';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como MENSAJERO Y ASISTENTE DE LA DIRECCIÓN GENERAL, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente:';
+$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como '.PUESTO_EMPLEADO.'que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
 
-$txt="<b>8.1</b> La relativa a los domicilios de proveedores y prestadores de bienes y servicios de “LA EMPRESA”;<br />
-<b>8.2</b> La referente a los domicilios de clientes de “LA EMPRESA”;<br />
-<b>8.3</b> La correspondiente a las rutas de entrega y cobranza de “LA EMPRESA”;<br />
-<b>8.4</b> La contenida en la documentación que le sea encomendada para su entrega y recepción dentro y fuera de la empresa;<br />
-<b>8.5</b> La derivada de fechas, contactos y circunstancias que se presenten en torno  de la documentación que le sea encomendada para su entrega y recepción dentro y fuera de la empresa;<br />
-<b>8.6</b> Cualquiera que obre en documentos aun y cuando se encuentren colocados a simple vista en las oficinas del Director General de “LA EMPRESA”, o en su domicilio personal ;<br />
+$txt="<b>8.1</b> La referente a las solicitudes que presenten los usuarios de los servicios de tecnología de la información que ofrece “LA EMPRESA o que sea resultado de su atención, asesoramiento o soporte;<br />
+<b>8.2</b> La correspondiente a los datos e intervención de los responsables de la administración, soporte o mantenimiento de la infraestructura de tecnología de la información y comunicaciones  de “LA EMPRESA”;<br />
+<b>8.3</b> La que obtenga como consecuencia de su contacto y comunicación con proveedores y prestadores de bienes y servicios;<br />
+<b>8.4</b> La referente a las propuestas que elabore “LA EMPRESA” para participar en procesos de concurso, licitaciones, invitaciones restringidas o de adjudicación directa que involucren tecnología de la información y comunicaciones;<br />
+<b>8.5</b> La relativa a la gestión de cuentas de usuario y asignación de recursos a las mismas;<br />
 
 ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
@@ -482,28 +480,34 @@ $pdf->SetFont('helvetica', '', 12);
 
 
 $txt='
-<b>8.7</b> La derivada de conversaciones realizadas por el Director General de “LA EMPRESA”;<br />
-<b>8.8</b> La que se desprenda de reuniones de trabajo celebradas por el Director General”;<br />
-<b>8.9</b> La relativa al o los domicilios del Director General, su cónyuge, ascendientes y descendientes;<br />
-<b>8.10</b> La referente a circunstancias y documentación personal del Director General, sus operaciones financieras, transacciones, pagos, compras, ventas, y actividades;<br />
-<b>8.11</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
-<b>8.12</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados como MENSAJERO Y ASISTENTE DE LA DIRECCIÓN GENERAL.';
-$pdf->writeHTMLCell(170, 70, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+<b>8.6</b> La obtenida como consecuencia de la implantación de controles de seguridad, análisis de riesgos o vulnerabilidades, ejercicios de prevención ante desastres y cualquier otro que evalúe la infraestructura física o lógica de “LA EMPRESA”;<br />
+<b>8.7</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
+<b>8.8</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados al puesto de '.PUESTO_EMPLEADO;
+$pdf->writeHTMLCell(170, 45, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
 
-$txt='<b>NOVENA.-</b> “EL TRABAJADOR” considerará como secretos técnicos y comerciales cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información que conste en medios escritos o electrónicos, imágenes, video, voz o texto referente al nombre o nombres de clientes actuales o potenciales, negociaciones, metodologías, fórmulas de negocios, planes de trabajo, compilaciones o registros, información relativa a investigaciones o estudios sobre “LA EMPRESA”, registros de desarrollo de proyectos o investigaciones que realice o contrate “CONSORCIO HERMES” sea total o relativa a cualquiera de sus etapas, inventos, información proporcionada por sus clientes, capacidad tecnológica y programas de cómputo, así como cualquier información en que se exprese o se ostente la leyenda “Información Confidencial” incluso cuando “EL TRABAJADOR” haya intervenido en su conformación.';
+$txt='<b>NOVENA.-</b> “EL TRABAJADOR” considerará como secretos técnicos y comerciales cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información que conste en medios escritos o electrónicos, imágenes, video, voz o texto referente al nombre o nombres de clientes actuales o potenciales, negociaciones, metodologías, fórmulas de negocios, planes de trabajo, compilaciones o registros, información relativa a investigaciones o estudios sobre “LA EMPRESA”, registros de desarrollo de proyectos o investigaciones que realice o contrate “CONSORCIO HERMES” sea total o relativa a cualquiera de sus etapas, inventos, información proporcionada por sus clientes, capacidad tecnológica y programas de cómputo, así como cualquier información en que se exprese o se ostente la leyenda “Información Confidencial” incluso cuando “EL TRABAJADOR” haya intervenido en su conformación. ';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como '.PUESTO_EMPLEADO.' que  constituyen secretos técnicos y comerciales cuya divulgación puede causar perjuicios a “CONSORCIO HERMES”  la siguiente:';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
-$txt='<b>DÉCIMA.-</b> “EL TRABAJADOR” manifiesta que conoce los alcances del artículo 86 de la Ley de la Propiedad Industrial el cual establece que <i>“la persona física o moral que contrate a un trabajador que esté laborando o haya laborado o a un profesionista, asesor o consultor que preste o haya prestado sus servicios para otra persona, con el fin de obtener secretos industriales de ésta, será responsable del pago de daños y perjuicios que le ocasione a dicha persona. También será responsable del pago de daños y perjuicios la persona física o moral que por cualquier medio ilícito obtenga información que contemple un secreto industrial”.</i> ';
+
+$txt='<b>9.1</b> Las estrategias de “LA EMPRESA”, sus procesos, instructivos, políticas y prácticas definidas para la atención de usuarios internos y externos en materia de Tecnologías de la Información y Comunicaciones;<br />
+<b>9.2</b> Las características técnicas, cantidad, ubicación, costos, aspectos de mantenimiento, control,  y en general las particularidades de la infraestructura física y lógica de tecnología de la información y comunicaciones de “CONSORCIO HERMES”;<br />
+<b>9.3</b> Los desarrollos o adaptaciones de programas de cómputo, aplicaciones o interfaces auspiciados por “LA EMPRESA” aún en el caso de intervención de “EL TRABAJADOR” y con independencia del reconocimiento que le corresponda como autor;<br />
+<b>9.4</b> Los códigos fuente de los programas o aplicaciones propiedad de “CONSORCIO HERMES”;<br />
+<b>9.5</b> Compilaciones o registros de proyectos de tecnología de la información y comunicaciones en que intervenga “LA EMPRESA”;<br />
+<b>9.6</b> Trabajos de investigación en que participe “CONSORCIO HERMES” vinculados a la aplicación de soluciones de tecnología de la información y comunicaciones;<br />
+<b>9.7</b> La relativa a la gestión de cuentas de usuario y asignación de recursos a las mismas;<br />
+';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='<b>DÉCIMA PRIMERA.-</b>  “CONSORCIO HERMES” y “EL TRABAJADOR” acuerdan que en caso de que “LA EMPRESA” ejerza acciones en contra de una persona física o moral que contrate a “EL TRABAJADOR” en tanto esté laborando para “LA EMPRESA” o cuando haya dejado de laborar en “CONSORCIO HERMES”, con el fin de obtener secretos industriales de “CONSORCIO HERMES”, y como resultado de dichas acciones se obtenga sentencia definitiva que  declare responsable a dicha persona física o moral de los daños y perjuicios causados a “LA EMPRESA”, con independencia de la responsabilidad penal en que se incurra, “EL TRABAJADOR” pagará a “CONSORCIO HERMES”:</i> ';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
-$pdf->Ln();
 
 
 
@@ -525,9 +529,24 @@ $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
 
-$txt='<b>11.1</b>  Una cantidad igual al cincuenta por ciento del monto total que por concepto de pago por los daños y perjuicios causados se imponga en la sentencia a la persona física o moral que se declare responsable, o  ';
-$pdf->writeHTMLCell(170, 20, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
+$txt='<b>9.8</b> La relacionada con la administración de los servicios de Web, su diseño, mantenimiento, sistemas de búsqueda  y en general sus particularidades aplicadas respecto de “LA EMPRESA”, y<br />
+<b>9.9</b> Aquella  que obre en bases de datos, copias de respaldo o archivos resultado de recuperación, con independencia del medio de almacenamiento, propiedad  de “LA EMPRESA o bajo control derivado de acuerdos, contratos o convenios celebrados con terceros. ';
+$pdf->writeHTMLCell(170, 45, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
+
+$txt='<b>DÉCIMA.-</b> “EL TRABAJADOR” manifiesta que conoce los alcances del artículo 86 de la Ley de la Propiedad Industrial el cual establece que <i>“la persona física o moral que contrate a un trabajador que esté laborando o haya laborado o a un profesionista, asesor o consultor que preste o haya prestado sus servicios para otra persona, con el fin de obtener secretos industriales de ésta, será responsable del pago de daños y perjuicios que le ocasione a dicha persona. También será responsable del pago de daños y perjuicios la persona física o moral que por cualquier medio ilícito obtenga información que contemple un secreto industrial”.</i> ';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+$txt='<b>DÉCIMA PRIMERA.-</b>  “CONSORCIO HERMES” y “EL TRABAJADOR” acuerdan que en caso de que “LA EMPRESA” ejerza acciones en contra de una persona física o moral que contrate a “EL TRABAJADOR” en tanto esté laborando para “LA EMPRESA” o cuando haya dejado de laborar en “CONSORCIO HERMES”, con el fin de obtener secretos industriales de “CONSORCIO HERMES”, y como resultado de dichas acciones se obtenga sentencia definitiva que  declare responsable a dicha persona física o moral de los daños y perjuicios causados a “LA EMPRESA”, con independencia de la responsabilidad penal en que se incurra, “EL TRABAJADOR” pagará a “CONSORCIO HERMES”:</i> ';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
+
+$txt='<b>11.1</b>  Una cantidad igual al cincuenta por ciento del monto total que por concepto de pago por los daños y perjuicios causados se imponga en la sentencia a la persona física o moral que se declare responsable, o  ';
+$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->Ln();
+
 
 
 $txt='<b>11.2</b>   Una cantidad equivalente en moneda nacional a USD $30´000.00 (Treinta Mil Dólares 00/100, moneda de curso legal en los Estados Unidos de América) si este monto resultase mayor que aquel obtenido conforme al inciso 11.1 de esta Cláusula.  ';
@@ -569,9 +588,6 @@ $pdf->Ln();
 
 
 
-
-
-$pdf->AddPage();
 $num=$pdf->getNumPages();
 $letra = $paginas[$num-1];
 $fecha = strtolower($dias[DIA-1])." de ".strtolower(MES)." de dos mil ".strtolower($anio[ANIO-2001]);
