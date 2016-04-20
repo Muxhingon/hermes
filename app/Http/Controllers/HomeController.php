@@ -74,4 +74,8 @@ class HomeController extends Controller
       return view('TIC.contrato');
     }
 
+    public function TICnda(){
+      return view('TIC.nda');
+    }
+
 }

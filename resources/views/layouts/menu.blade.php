@@ -195,6 +195,17 @@
                             </li>
                           @endif
 
+                          @if($path == "TIC/nda")
+                            <li>
+                              <a class="active" href="{{ url('/TIC/nda') }}"><i class="fa fa-file fa-fw"></i> NDA  </a>
+                            </li>
+
+                          @else
+                            <li>
+                              <a href="{{ url('/TIC/nda') }}"><i class="fa fa-file fa-fw"></i> NDA </a>
+                            </li>
+                          @endif
+
                           </ul>
                         </li>
 
