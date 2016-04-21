@@ -384,7 +384,7 @@
         <input type="text" class="form-control" name="fecha_contLab" id="fecha_contLab" required>
       </div>
       <div class="form-group  col-md-4">
-        <input type="text" class="form-control" name="fecha_fincontLab" id="fecha_fincontLab" readonly>
+        <input style="background-color:#eee" type="text" class="form-control" name="fecha_fincontLab" id="fecha_fincontLab" readonly>
       </div>
     </div>
 
