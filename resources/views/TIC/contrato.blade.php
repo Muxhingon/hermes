@@ -10,7 +10,7 @@
 
 <br />
 <div class="col-md-12">
-  <h1>Formulario para generar Contrato Individual de Trabajo TIC</h1>
+  <h1>Formulario para generar Contrato Individual de Trabajo y NDA de TIC</h1>
   <p class="text-info">
     Por favor proporcione la información que requieren los campos, es muy importante seguir las secuencias, orden y características en que se plantea la presentación de los datos
   </p>
@@ -38,7 +38,7 @@
         </div>
 
 
-      <div class="col-md-12">
+
         <div class="row">
           <div class="form-group col-md-6">
             <label  for="domicilio_empre">Domicilio determinado por la dirección general  </label>
@@ -50,6 +50,7 @@
 
 
 
+
     <div class="row">
       <div class="form-group col-md-5">
         <label for="representante">Nombre Completo del Representante Legal</label>
@@ -57,7 +58,146 @@
       </div>
     </div>
 
-</div>
+
+
+    <div class="row">
+      <div class="form-group col-md-3">
+        <label  for="correo_repres">Correo Electrónico de Representante  </label>
+        <div class="input-group">
+          <input type="text" class="form-control" name="correo_repres" id="correo_repres" placeholder=" ejemplo" required>
+          <span class="input-group-addon">@consorciohermes.mx</span>
+        </div>
+      </div>
+    </div>
+
+
+  <h4>Respecto a las facultades del Representante legal</h4>
+  <p>
+    Por favor indique en que documento se encuentran las facultades del representante legal
+  </p>
+
+
+
+        <p><b>¿Las facultades del representante legal se encuentran previstas en la Escritura Constitutiva de Consorcio HERMES?</b></p>
+
+
+      <div class="form-group col-md-3">
+        <select class="form-control col-md-3" name="Cb" id="Cb" onchange="muestraopb2()">
+              <option value="1">
+                Si
+              </option>
+              <option value="2">
+                No
+              </option>
+        </select>
+      </div>
+
+
+
+<div class="row">
+
+      <div id="OPCIONALCB">
+        <div class="row">
+          <div class="form-group col-md-5">
+            <label id="label_numinst" for="numeroinstrumento">Indique el número de la escritura pública o póliza correspondiente</label>
+            <input type="text" class="form-control" name="numeroinstrumento" id="numeroinstrumento" placeholder=" 212331">
+          </div>
+        </div>
+
+
+        <span>Indique la fecha de la escritura o póliza correspondiente. (Hacer Click para escoger la fecha)</span>
+
+        <div class="row">
+          <div class="form-group  col-md-4">
+            <input type="text" class="form-control" name="fecha_poliza" id="fecha_poliza">
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="form-group col-md-5">
+            <label id='label_nombrep' for="nombre_publico">Señale el nombre del Fedatario Público ante quien se otorgó la escritura o póliza sin indicar Título Profesional:</label>
+            <input type="text" class="form-control" name="nombre_publico" id="nombre_publico" placeholder=" Francisco Alejandro Perez Perez">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-3">
+            <label for="publico" id="label_publico">Seleccione el tipo de fedatario público ante el cual fue otorgado el poder o mandato</label>
+            <select class="form-control col-md-3" name="publico" id="publico" onchange="instrumento()">
+                  <option value="0">
+                    Seleccione una opción...
+                  </option>
+                  <option value="1">
+                    Notario Público
+                  </option>
+                  <option value="2">
+                    Corredor Público
+                  </option>
+            </select>
+          </div>
+        </div>
+
+
+        <div id="notario">
+
+          <div class="row">
+            <div class="form-group col-md-5">
+              <label for="notaria_numero">Número de Notaría</label>
+              <input type="text" class="form-control" name="notaria_numero" id="notaria_numero" placeholder=" 123456789">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-5">
+              <label  for="notario_estadom">Estado y/o Municipio de Adscripción</label>
+              <input type="text" class="form-control" name="notario_estadom" id="notario_estadom" placeholder=" Querétaro, Querétaro">
+            </div>
+          </div>
+        </div>
+
+
+        <div id="corredor">
+
+          <div class="row">
+            <div class="form-group col-md-5">
+              <label  for="numero_corredor">Número de Correduría</label>
+              <input type="text" class="form-control" name="numero_corredor" id="numero_corredor" placeholder=" 1234567">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-5">
+              <label  for="corredor_estado">Entidad Federativa </label>
+              <input type="text" class="form-control" name="corredor_estado" id="corredor_estado" placeholder=" Querétaro">
+            </div>
+          </div>
+        </div>
+
+      </div><!-- cierre de cb-->
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,6 +305,29 @@
       </div>
 
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -387,6 +550,9 @@ $.datepicker.setDefaults($.datepicker.regional['es']);
 
   $(function(){
     $("#otra").hide();
+    $("#OPCIONALCB").hide();
+    $("#corredor").hide();
+    $("#notario").hide();
 
     $("#fecha_contLab").datepicker({
       changeMonth: true,
@@ -413,6 +579,36 @@ $.datepicker.setDefaults($.datepicker.regional['es']);
     });
 
   });
+
+
+
+  function muestraopb2(){
+    var selec = $("#Cb").val();
+    if(selec==2){
+      $("#OPCIONALCB").show('fade');
+    }else{
+      $("#publico").val(0)
+      $("#corredor").hide();
+      $("#notario").hide();
+      $("#OPCIONALCB").hide('fade');
+    }
+  }
+
+  function instrumento(){
+    var selec = $("#publico").val();
+
+    if(selec==1){
+      $("#corredor").hide('fade');
+      $("#notario").show('fade');
+
+    }else if(selec==2){
+      $("#corredor").show('fade');
+      $("#notario").hide('fade');
+    }else{
+      $("#corredor").hide('fade');
+      $("#notario").hide('fade');
+    }
+  }
 
   function nacionalidad(){
     var selec = $("#nac").val();
