@@ -273,7 +273,7 @@
         <input required type="text" class="form-control" name="puesto" id="puesto" placeholder="Puesto">
       </div>
     </div>
-    
+
 
     <h4>Fecha del contrato laboral</h4>
     <p>
@@ -382,10 +382,8 @@ $.datepicker.regional['es'] = {
 $.datepicker.setDefaults($.datepicker.regional['es']);
 
   $(function(){
-    $("#OPCIONALCB").hide();
-    $("#corredor").hide();
-    $("#notario").hide();
     $("#otra").hide();
+    $("#OPCIONALCB").hide();
 
     $("#fecha_contLab").datepicker({
       changeMonth: true,
