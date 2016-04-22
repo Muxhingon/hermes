@@ -172,6 +172,18 @@
                             @endif
 
 
+                            @if($path == "nda/compras")
+                              <li>
+                                <a class="active" href="{{ url('/nda/compras') }}"><i class="fa fa-file fa-fw"></i> Compras y Almacén</a>
+                              </li>
+
+                            @else
+                              <li>
+                                <a href="{{ url('/nda/compras') }}"><i class="fa fa-file fa-fw"></i> Compras y Almacén </a>
+                              </li>
+                            @endif
+
+
 
                           </ul>
                         </li>

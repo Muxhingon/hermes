@@ -33,6 +33,7 @@ Route::resource('user', 'UserController');
   Route::get('/nda/mensajero', 'HomeController@NDAmensajero');
   Route::get('/nda/intendencia', 'HomeController@NDAintendencia');
   Route::get('/nda/asistente', 'HomeController@NDAasistente');
+  Route::get('/nda/compras', 'HomeController@NDAcompras');
   Route::get('/TIC/contrato', 'HomeController@TICcontrato');
   Route::get('/TIC/nda', 'HomeController@TICnda');
 
