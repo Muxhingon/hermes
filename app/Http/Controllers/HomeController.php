@@ -69,6 +69,9 @@ class HomeController extends Controller
     public function NDAasistente(){
       return view('NDA.asistente');
     }
+    public function NDAcompras(){
+      return view('NDA.compras');
+    }
 
     public function TICcontrato(){
       return view('TIC.contrato');
