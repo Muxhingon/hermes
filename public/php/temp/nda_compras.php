@@ -331,7 +331,7 @@ $correo_emp los cuales reconoce subsistirán para los efectos del presente contr
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="<b>B)</b> Haber sido contratado para desempeñar el puesto de titular de la COORDINACIÓN DE ADMINISTRACIÓN en “CONSORCIO HERMES”. ";
+$txt="<b>B)</b> Haber sido contratado para desempeñar el puesto de titular del área de COMPRAS Y ALMACEN en “CONSORCIO HERMES”. ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
@@ -452,22 +452,21 @@ $txt='<b>SÉPTIMA.-</b> “EL TRABAJADOR” guardará escrupulosamente los secre
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular de la COORDINACIÓN DE ADMINISTRACIÓN tenga acceso o constituyan actividades inherentes a la descripción de su puesto.";
+$txt="<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos reservados, cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información de los empleados, asesores o socios de “LA EMPRESA”, características y ubicación de sus instalaciones, su información financiera, tarifas de servicios, recursos materiales, procesos, guías e instructivos administrativos, así como aquella que en su calidad de titular del área de COMPRAS Y ALMACÉN tenga acceso o constituyan actividades inherentes a la descripción de su puesto.";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
 
 
-$txt="Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular de la COORDINACIÓN DE ADMINISTRACIÓN, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ";
+$txt="Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como titular del área de COMPRAS Y ALMACÉN, que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente:  ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt="<b>8.1</b> La derivada de la administración de los recursos financieros;<br />
-<b>8.2</b>  La contenida en títulos de crédito o aquella necesaria para su elaboración;<br />
-<b>8.3</b>  La referente a transferencias desde o en favor de cualquier tipo de cuenta a nombre de “CONSORCIO HERMES” así como los mecanismos para su ejecución y administración;<br />
-<b>8.4</b> La relacionada con cuentas por cobrar, cuentas por pagar y en general cualquiera referente a acreedores o deudores, plazos, montos, condiciones de cobro o pago, líneas de crédito utilizadas o instituciones o partes participantes;<br />
-<b>8.5</b> La relativa a los recursos materiales de “CONSORCIO HERMES”;<br />
-<b>8.6</b> La contenida o derivada de la elaboración de reportes gerenciales;<br />
+$txt="<b>8.1</b> Aquella relacionada con las adquisiciones a proveedores  y prestadores de bienes o  servicios que requiere “LA EMPRESA” para su operación;<br />
+<b>8.2</b> La referente al desarrollo y ejecución de las ventas a partir de las entradas y salidas de almacén;<br />
+<b>8.3</b> La que obra el en archivo de “CONSORCIO HERMES” entregada para su resguardo por ser considerada  archivo muerto;<br />
+<b>8.4</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
+<b>8.5</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados al área de COMPRAS Y ALMACÉN.
  ";
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
@@ -484,16 +483,8 @@ $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
 
-$txt="<b>8.7</b> La correspondiente al manejo de caja chica y vales de gasolina;<br />
-<b>8.8</b> La integrada para los contratos, convenios o acuerdos con proveedores;<br />
-<b>8.9</b> La obtenida de sus actividades de apoyo a las distintas áreas de la empresa para el desarrollo de sus funciones, y<br />
-<b>8.10</b> La que tenga una naturaleza análoga a la listada en esta cláusula cuyo acceso se derive de asuntos encomendados a la COORDINACIÓN DE ADMINISTRACIÓN.";
-$pdf->writeHTMLCell(170, 36, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
-$pdf->Ln();
-
-
 $txt='<b>NOVENA.-</b>“EL TRABAJADOR” considerará como secretos técnicos y comerciales cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” cualquier información que conste en medios escritos o electrónicos, imágenes, video, voz o texto referente al nombre o nombres de clientes actuales o potenciales, negociaciones, metodologías, fórmulas de negocios, planes de trabajo, compilaciones o registros, información relativa a investigaciones o estudios sobre “LA EMPRESA”, registros de desarrollo de proyectos o investigaciones que realice o contrate “CONSORCIO HERMES” sea total o relativa a cualquiera de sus etapas, inventos, información proporcionada por sus clientes, capacidad tecnológica y programas de cómputo, así como cualquier información en que se exprese o se ostente la leyenda “Información Confidencial” incluso cuando “EL TRABAJADOR” haya intervenido en su conformación. ';
-$pdf->writeHTML( $txt, true, 0, true, false, 'J');
+$pdf->writeHTMLCell(170, 66, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 
 $txt='<b>DÉCIMA.-</b> “EL TRABAJADOR” manifiesta que conoce los alcances del artículo 86 de la Ley de la Propiedad Industrial el cual establece que <i>“la persona física o moral que contrate a un trabajador que esté laborando o haya laborado o a un profesionista, asesor o consultor que preste o haya prestado sus servicios para otra persona, con el fin de obtener secretos industriales de ésta, será responsable del pago de daños y perjuicios que le ocasione a dicha persona. También será responsable del pago de daños y perjuicios la persona física o moral que por cualquier medio ilícito obtenga información que contemple un secreto industrial”. </i>  ';
