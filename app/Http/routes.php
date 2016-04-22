@@ -13,7 +13,12 @@
   Route::auth();
 Route::group(['middleware' => ['web']],function(){
 
+  Route::get('/home',function(){
+    return redirect('/');
+  });
+
 Route::resource('user', 'UserController');
+
 
 
   Route::get('/', 'HomeController@index');

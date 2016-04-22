@@ -463,11 +463,11 @@
     </p>
 
     <div class="row">
-      <div class="form-group col-md-2">
+      <div class="form-group col-md-2 col-xs-5">
         <label for="salario_diario_num"> </label>
         <div class="input-group">
           <span id="salario_mensual_num" class="input-group-addon">$</span>
-          <input required type="text" class="form-control" name="salario_mensual_num" id="salario_mensual_num" placeholder="150.00">
+          <input required type="text" class="form-control" name="salario_mensual_num" id="salario_mensual_num" placeholder="4500.00">
           <span id="salario_mensual_num" class="input-group-addon"> M.N.</span>
         </div>
       </div>
@@ -477,7 +477,7 @@
     <div class="row">
       <div class="form-group col-md-5">
         <label for="salario_mensual_letra">Monto del salario mensual (Letra) :</label>
-        <input required type="text" class="form-control" name="salario_mensual_letra" id="salario_mensual_letra" placeholder="CIENTO CINCUENTA PESOS 00/100 M.N.">
+        <input required type="text" class="form-control" name="salario_mensual_letra" id="salario_mensual_letra" placeholder="CUATRO MIL QUINIENTOS PESOS 00/100 M.N.">
       </div>
     </div>
 

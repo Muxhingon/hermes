@@ -387,7 +387,7 @@ $pdf->MultiCell(220, 5,COSTADO, 0, 'J', 0, 2, 20 ,-150, true);
 $pdf->StopTransform();
 $pdf->SetFont('helvetica', '', 12);
 
-$txt="<b>TERCERA.-</b>   “EL TRABAJADOR” reconoce y acepta que cualquier información a que acceda o sea de su conocimiento derivada o  con motivo de la relación laboral que sostiene con “CONSORCIO HERMES” tiene una aplicación comercial que le permite a “LA EMPRESA” obtener o mantener una ventaja competitiva o económica frente a terceros en la realización de su actividad empreshelvetica, en consecuencia  “CONSORCIO HERMES” ha implantado diversos controles jurídicos y tecnológicos para preservar dicha información por lo que “EL TRABAJADOR” la considerará y tratará como “CONFIDENCIAL” y “RESTRINGIDA”.";
+$txt="<b>TERCERA.-</b>   “EL TRABAJADOR” reconoce y acepta que cualquier información a que acceda o sea de su conocimiento derivada o  con motivo de la relación laboral que sostiene con “CONSORCIO HERMES” tiene una aplicación comercial que le permite a “LA EMPRESA” obtener o mantener una ventaja competitiva o económica frente a terceros en la realización de su actividad empresarial, en consecuencia  “CONSORCIO HERMES” ha implantado diversos controles jurídicos y tecnológicos para preservar dicha información por lo que “EL TRABAJADOR” la considerará y tratará como “CONFIDENCIAL” y “RESTRINGIDA”.";
 $pdf->writeHTMLCell(170, 45, 14 ,25, $txt, 0,0,0,0, 'J', 0, 2,  true);
 $pdf->Ln();
 

@@ -448,7 +448,7 @@ $txt='<b>OCTAVA.-</b> “EL TRABAJADOR” asumirá como asuntos administrativos 
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
-$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como '.PUESTO_EMPLEADO.'que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ';
+$txt='Es información derivada o relacionada con las funciones de “EL TRABAJADOR” inherentes a la descripción de su puesto como '.PUESTO_EMPLEADO.' que  constituyen asuntos administrativos reservados cuya divulgación puede causar perjuicios a “CONSORCIO HERMES” la siguiente: ';
 $pdf->writeHTML( $txt, true, 0, true, false, 'J');
 $pdf->Ln();
 
